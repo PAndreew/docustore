@@ -141,34 +141,122 @@ def scrape_documentation(url: str, limit: int) -> List[Dict[str, Any]]:
         return []
 
 
-def create_knowledge_graph(documents: List[Dict[str, Any]]) -> nx.DiGraph:
-    """Creates a knowledge graph from cleaned documentation text."""
-    # ... (function content is unchanged)
-    logging.info("Starting knowledge graph generation...")
+def chunk_document_by_headers(markdown_content: str) -> List[Dict[str, str]]:
+    """
+    Splits a markdown document into chunks based on its headers.
+
+    Args:
+        markdown_content: The raw markdown text of a single page.
+
+    Returns:
+        A list of chunks, where each chunk is a dictionary with a 'header' and 'content'.
+    """
+    # Regex to find markdown headers (e.g., #, ##, ###)
+    header_pattern = re.compile(r"^(#{1,6})\s+(.*)", re.MULTILINE)
+    chunks = []
+    
+    last_end = 0
+    
+    # Find all header matches
+    matches = list(header_pattern.finditer(markdown_content))
+    
+    # Handle content before the first header
+    if matches and matches[0].start() > 0:
+        chunks.append({
+            "header": "Introduction",
+            "content": markdown_content[0:matches[0].start()].strip()
+        })
+
+    # Create a chunk for each header and its content
+    for i, match in enumerate(matches):
+        start = match.start()
+        header_text = match.group(2).strip()
+        
+        # The content of this chunk is from the end of its header to the start of the next one
+        content_start = match.end()
+        content_end = matches[i + 1].start() if i + 1 < len(matches) else len(markdown_content)
+        
+        content = markdown_content[content_start:content_end].strip()
+        
+        chunks.append({"header": header_text, "content": content})
+        
+    # If no headers are found, treat the whole document as one chunk
+    if not chunks and markdown_content:
+        chunks.append({"header": "General", "content": markdown_content})
+        
+    return chunks
+
+def create_knowledge_graph(
+    documents: List[Dict[str, Any]],
+    technical_entities: List[str],
+    enabled_spacy_entities: List[str],
+    associate_descriptions: bool,
+) -> nx.DiGraph:
+    """
+    Creates a technical knowledge graph, associating entities with their descriptive text.
+    """
+    logging.info("Starting technical knowledge graph generation...")
     try:
         nlp = spacy.load("en_core_web_sm")
     except OSError:
-        logging.error("spaCy model 'en_core_web_sm' not found.")
-        logging.error("Please run: python -m spacy download en_core_web_sm")
+        # ... (error handling is the same)
         raise
 
     G = nx.DiGraph()
+    cleaner = EnhancedDataCleaner() # We'll need a cleaner instance here
+
+    patterns = {
+        "CLASS": re.compile(r"\bclass\s+([A-Za-z_][A-Za-z0-9_]+)"),
+        "FUNCTION": re.compile(r"\bdef\s+([A-Za-z_][A-Za-z0-9_]+)"),
+    }
+    enabled_patterns = {k: v for k, v in patterns.items() if k in technical_entities}
+    
     total_docs = len(documents)
     for i, doc_data in enumerate(documents):
-        text = doc_data.get("cleaned_text", "")
-        if not text:
+        raw_markdown = doc_data.get("markdown", "")
+        if not raw_markdown:
             continue
-
-        if (i + 1) % 50 == 0: # Log progress every 50 documents
-            logging.info("Processing document %d/%d...", i + 1, total_docs)
             
-        doc = nlp(text)
-        for ent in doc.ents:
-            if ent.label_ in ["ORG", "PRODUCT", "PERSON", "GPE", "WORK_OF_ART"]:
-                if not G.has_node(ent.text):
-                    G.add_node(ent.text, label=ent.label_)
+        if (i + 1) % 50 == 0:
+            logging.info("Processing document %d/%d...", i + 1, total_docs)
 
-    logging.info("Graph generation complete. Found %d nodes.", G.number_of_nodes())
+        # Step 1: Split document into semantic chunks
+        chunks = chunk_document_by_headers(raw_markdown)
+
+        for chunk in chunks:
+            # Step 2: Clean the text content of this specific chunk
+            cleaned_chunk_content = cleaner.clean(chunk["content"])
+            if not cleaned_chunk_content:
+                continue
+
+            # Step 3: Extract entities from this chunk
+            found_entities = set()
+
+            # Rule-based extraction
+            for label, pattern in enabled_patterns.items():
+                for match in pattern.finditer(cleaned_chunk_content):
+                    found_entities.add((match.group(1), label))
+            
+            # spaCy-based extraction
+            if enabled_spacy_entities:
+                doc = nlp(cleaned_chunk_content)
+                for ent in doc.ents:
+                    if ent.label_ in enabled_spacy_entities:
+                        found_entities.add((ent.text, ent.label_))
+            
+            # Step 4: Add entities to graph and associate description
+            for entity_text, label in found_entities:
+                if not G.has_node(entity_text):
+                    node_attrs = {"label": label}
+                    if associate_descriptions:
+                        # Add the cleaned text of the chunk as the description
+                        node_attrs["description"] = cleaned_chunk_content
+                        logging.debug("Found entity '%s' and associated its description.", entity_text)
+                    G.add_node(entity_text, **node_attrs)
+
+    logging.info(
+        "Graph generation complete. Found %d nodes.", G.number_of_nodes()
+    )
     return G
 
 

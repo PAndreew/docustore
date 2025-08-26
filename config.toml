@@ -1,7 +1,13 @@
-# Global settings for the pipeline
 [pipeline]
 output_dir = "repository"
-cache_dir = ".cache" # Directory to store raw scraped data
+cache_dir = ".cache"
+
+[knowledge_graph]
+# Enable or disable the association of descriptive text with graph nodes
+associate_descriptions = true
+
+technical_entities = ["CLASS", "FUNCTION"]
+enabled_spacy_entities = ["ORG", "PRODUCT"]
 
 # Define each documentation target you want to process
 [targets.firecrawl]
