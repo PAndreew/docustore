@@ -1,0 +1,13 @@
+# Global settings for the pipeline
+[pipeline]
+output_dir = "repository"
+cache_dir = ".cache" # Directory to store raw scraped data
+
+# Define each documentation target you want to process
+[targets.firecrawl]
+url = "https://docs.firecrawl.dev/"
+page_limit = 500
+
+[targets.langchain]
+url = "https://python.langchain.com/docs/get_started/introduction"
+page_limit = 2000
