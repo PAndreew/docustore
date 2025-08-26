@@ -1,0 +1,29 @@
+[project]
+name = "documentation-pipeline"
+version = "0.1.0"
+description = "A pipeline to scrape documentation, clean it, and build a knowledge graph."
+requires-python = ">=3.8"
+dependencies = [
+    "firecrawl-py",
+    "python-dotenv",
+    "markdown-it-py",
+    "beautifulsoup4",
+    "spacy==3.7.2",
+    "networkx",
+]
+
+# Define optional dependencies for development (like linters and formatters)
+[project.optional-dependencies]
+dev = [
+    "ruff", # An extremely fast Python linter and code formatter
+]
+
+[tool.ruff]
+# Same as Black's default line length
+line-length = 88
+# Enable a standard set of rules
+lint.select = ["E", "F", "W", "I", "UP"]
+
+[tool.ruff.format]
+# Use double quotes for strings
+quote-style = "double"
