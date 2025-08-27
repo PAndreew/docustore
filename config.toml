@@ -1,23 +1,52 @@
+# config.toml
+
 [pipeline]
 output_dir = "repository"
 cache_dir = ".cache"
 
 [knowledge_graph]
-# Enable or disable the association of descriptive text with graph nodes
-associate_descriptions = true
+# spaCy entities are still useful for general NER
+enabled_spacy_entities = ["ORG", "PRODUCT", "PERSON"]
 
-technical_entities = ["CLASS", "FUNCTION"]
-enabled_spacy_entities = ["ORG", "PRODUCT"]
+# --- New Section for the Triplet Extractor ---
+[triplet_extraction]
+# Global switch to turn this feature on or off. Set to false to skip the expensive ML step.
+enabled = true 
+# The Hugging Face model to use
+model_name = "sciphi/triplex" 
+# Confidence threshold for accepting extracted triples (future use, good practice)
+threshold = 0.8 
 
-# Define each documentation target you want to process
-[targets.firecrawl]
-url = "https://docs.firecrawl.dev/"
-page_limit = 2
 
+# --- Target-Specific Triplet Configuration ---
 [targets.langchain]
 url = "https://python.langchain.com/docs/get_started/introduction"
-page_limit = 2
+page_limit = 2000
+patterns = [
+    { label = "CLASS",    pattern = "\\bclass\\s+([A-Za-z_][A-Za-z0-9_]+)" },
+    { label = "FUNCTION", pattern = "\\bdef\\s+([A-Za-z_][A-Za-z0-9_]+)" }
+]
+# Define the "ontology" for the LangChain domain
+entity_types = ["CLASS", "FUNCTION", "PARAMETER", "MODULE", "CONCEPT"]
+predicates = [
+    "HAS_METHOD", 
+    "RETURNS", 
+    "USES_PARAMETER", 
+    "IMPORTS", 
+    "INHERITS_FROM",
+    "DESCRIBES_CONCEPT"
+]
 
 [targets.mintlify]
 url = "https://mintlify.com/docs"
-page_limit = 1
+page_limit = 3
+patterns = [] # No rule-based patterns needed for this target
+# Define the "ontology" for the Mintlify domain
+entity_types = ["FEATURE", "UI_ELEMENT", "COMMAND", "CONFIGURATION", "CONCEPT"]
+predicates = [
+    "HAS_FEATURE",
+    "CONFIGURES",
+    "IS_PART_OF",
+    "REQUIRES_ROLE",
+    "DESCRIBES"
+]
