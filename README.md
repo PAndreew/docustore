@@ -49,14 +49,26 @@ Follow these instructions to set up and run the pipeline on your local machine.
 git clone <your-repository-url>
 cd <your-repository-name> 
 ```
-### 2. Install Dependencies code
-Install all required Python packages.
+### 2.a Create and activate a virtual environment
+
 This project uses uv for fast and reliable dependency management.
 ```
-uv pip install -r requirements.txt
+# Create a virtual environment named .venv in the current directory
+uv venv
 
-# Download the required spaCy model
-python -m spacy download en_core_web_sm
+# Activate the environment
+# On macOS/Linux:
+source .venv/bin/activate
+
+# On Windows (Command Prompt/PowerShell):
+.venv\Scripts\activate
+```
+### 2.b Install dependencies
+
+
+```
+# Install the project in editable mode, including all dependencies
+uv pip install -e .
 ```
 ### 3. Configure Your Environment
 Configuration is handled by two main files.
@@ -100,22 +112,22 @@ Scrapes a target website and saves the raw data to the local cache.
 
 ```bash
 # Scrape the 'langchain' target defined in config.toml
-python main.py scrape langchain
+python -m pipeline.main scrape langchain
 
 # Force re-scraping even if a cache file exists
-python main.py scrape langchain --force
+python -m pipeline.main scrape langchain --force
 
 # Scrape all targets defined in the config
-python main.py scrape all
+python -m pipeline.main scrape all
 ```
 ### `process`
 Loads data from the cache, builds the knowledge graph using the hybrid ML approach, and saves the output. This command will fail if the cache for the target does not exist.
 ```Bash
 # Process the cached data for the 'langchain' target
-python main.py process langchain
+python -m pipeline.main process langchain
 
 # Process all existing caches
-python main.py process all
+python -m pipeline.main process all
 ```
 ### `run`
 
