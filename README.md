@@ -45,8 +45,8 @@ Follow these instructions to set up and run the pipeline on your local machine.
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
-cd <your-repository-name>
+git clone git@github.com:PAndreew/docustore.git
+cd docustore
 ```
 
   
