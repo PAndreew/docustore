@@ -1,87 +1,32 @@
 # =================================================================
-# Automated Knowledge Graph Builder Configuration
+# Automated Knowledge Pack Builder Configuration (Vector Search MVP)
 # =================================================================
 
 [pipeline]
-# Directory where the final graph and chunk files will be saved.
+# Directory where the final Knowledge Packs will be saved.
 output_dir = "repository"
 # Directory for caching raw scraped data to avoid re-scraping.
 cache_dir = ".cache"
 
-[knowledge_graph]
-# General purpose Named Entity Recognition using spaCy's pre-trained model.
-# These are good for finding high-level entities in any text.
-# For available types, see: https://spacy.io/models/en#en_core_web_sm
-enabled_spacy_entities = ["ORG", "PRODUCT", "PERSON", "GPE"] # GPE = Geopolitical Entity (countries, cities)
-
-# --- Configuration for the Advanced Triplet Extractor ---
-[triplet_extraction]
-# Global switch to turn the ML model on/off.
-# Set to 'false' for quick tests that only use rule-based and spaCy extraction.
-enabled = true 
-# The Hugging Face model to use for extracting (Subject, Predicate, Object) triples.
-model_name = "sciphi/triplex" 
-# Confidence threshold for accepting extracted triples (future use, good practice).
-threshold = 0.8 
+[vector_store]
+# The sentence-transformer model to use for creating embeddings.
+# 'all-MiniLM-L6-v2' is a great, lightweight default.
+embedding_model_name = "all-MiniLM-L6-v2"
 
 # =================================================================
 # Target Definitions
 # Each target represents a documentation website to be processed.
+# For the vector search MVP, only the URL and page limit are needed.
 # =================================================================
 
 [targets.langchain]
 url = "https://python.langchain.com/docs/get_started/introduction"
 page_limit = 2000
-# Rule-based patterns for high-precision, language-specific extraction.
-patterns = [
-    { label = "CLASS",    pattern = "\\bclass\\s+([A-Za-z_][A-Za-z0-9_]+)" },
-    { label = "FUNCTION", pattern = "\\bdef\\s+([A-Za-z_][A-Za-z0-9_]+)" }
-]
-# The "ontology" for the Triplex model to understand the LangChain domain.
-# This guides the ML model on what kinds of entities and relationships to look for.
-entity_types = ["CLASS", "FUNCTION", "PARAMETER", "MODULE", "CONCEPT", "CHAIN", "AGENT"]
-predicates = [
-    "HAS_METHOD", 
-    "RETURNS", 
-    "USES_PARAMETER", 
-    "IMPORTS", 
-    "INHERITS_FROM",
-    "DESCRIBES_CONCEPT",
-    "IS_PART_OF"
-]
 
 [targets.mintlify]
 url = "https://mintlify.com/docs"
 page_limit = 500
-# This documentation is conceptual, so regex for code syntax is not useful.
-patterns = [] 
-# The "ontology" for the Mintlify domain (a documentation platform).
-entity_types = ["FEATURE", "UI_ELEMENT", "COMMAND", "CONFIGURATION", "CONCEPT", "INTEGRATION"]
-predicates = [
-    "HAS_FEATURE",
-    "CONFIGURES",
-    "IS_PART_OF",
-    "REQUIRES_ROLE",
-    "DESCRIBES",
-    "INTEGRATES_WITH"
-]
 
-# --- NEW TARGET ---
 [targets.firecrawl]
-url = "https://docs.firecrawl.dev/features/"
-page_limit = 10
-# Firecrawl has SDKs, so we can look for specific class names.
-patterns = [
-    { label = "SDK_CLASS", pattern = "\\bclass\\s+(FirecrawlApp)" }
-]
-# The "ontology" for the Firecrawl domain (a web scraping API/SDK).
-entity_types = ["API_ENDPOINT", "SDK_CLASS", "PARAMETER", "FEATURE", "CONCEPT", "DATA_FORMAT", "WEBHOOK"]
-predicates = [
-    "USES_PARAMETER",
-    "RETURNS_DATA",
-    "REQUIRES_AUTHENTICATION",
-    "CONFIGURES_JOB",
-    "SUPPORTS_FORMAT",
-    "TRIGGERS_WEBHOOK",
-    "IS_API_ENDPOINT_FOR"
-]
+url = "https://docs.firecrawl.dev/"
+page_limit = 500
