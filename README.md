@@ -91,8 +91,6 @@ FIRECRAWL_API_KEY="your_firecrawl_api_key_here"
 Pipeline Configuration (config.toml) - this file controls the pipeline. Define your scraping targets here.
 
 ```Toml
-
-        
     # config.toml
     [pipeline]
     output_dir = "repository"
