@@ -15,7 +15,9 @@ dependencies = [
     "transformers",
     "torch",
     "accelerate",
-    "bitsandbytes"
+    "bitsandbytes",
+    "chromadb",
+    "sentence_transformers"
 ]
 
 # Define optional dependencies for development (like linters and formatters)

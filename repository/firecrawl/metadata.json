@@ -1,0 +1,7 @@
+{
+  "framework": "firecrawl",
+  "version": "2025.08.27",
+  "documents_scraped": 10,
+  "chunks_embedded": 176,
+  "embedding_model": "all-MiniLM-L6-v2"
+}

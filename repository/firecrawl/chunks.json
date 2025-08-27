@@ -1,0 +1,882 @@
+{
+  "2600803b0bbbd99a55390015c2aa3ab8a5a99be2af8d21b87fd281d5de233228": {
+    "text": "[Firecrawl Docs home page![light logo](https://mintcdn.com/firecrawl/iilnMwCX-8eR1yOO/logo/logo.png?maxW=2048&auto=format&n=iilnMwCX-8eR1yOO&q=85&s=5e3a612c8e0081a9aea141847863ef2e)![dark logo](https://mintcdn.com/firecrawl/iilnMwCX-8eR1yOO/logo/logo-dark.png?maxW=2048&auto=format&n=iilnMwCX-8eR1yOO&q=85&s=79e671f437f328387d592ebb303d5922)](https://firecrawl.dev/)\n\nv2\n\nSearch...\n\nCtrl KAsk AI\n\nSearch...\n\nNavigation\n\nScrape\n\nChange Tracking\n\n[Documentation](https://docs.firecrawl.dev/introduction) [SDKs](https://docs.firecrawl.dev/sdks/overview) [Learn](https://www.firecrawl.dev/blog/category/tutorials) [Integrations](https://www.firecrawl.dev/app) [API Reference](https://docs.firecrawl.dev/api-reference/v2-introduction)\n\n[Playground](https://firecrawl.dev/playground)\n[Blog](https://firecrawl.dev/blog)\n[Community](https://discord.gg/gSmWdAkdwd)\n[Changelog](https://firecrawl.dev/changelog)",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "Introduction"
+  },
+  "ebec4954dd97535d0e9959e43f15d6eb71b7c4e9e92a04c75dd7c25e42d64240": {
+    "text": "- [Quickstart](https://docs.firecrawl.dev/introduction)\n- [MCP Server](https://docs.firecrawl.dev/mcp-server)\n- [Migrating from v1 to v2](https://docs.firecrawl.dev/migrate-to-v2)\n- [Rate Limits](https://docs.firecrawl.dev/rate-limits)\n- [Advanced Scraping Guide](https://docs.firecrawl.dev/advanced-scraping-guide)",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "Get Started"
+  },
+  "bf0416858624d8aee40a4373a168f92574d9d84fc9cc1622dc2c04d5364f11e3": {
+    "text": "- Scrape\n\n\n\n  - [Scrape](https://docs.firecrawl.dev/features/scrape)\n  - [Faster Scraping](https://docs.firecrawl.dev/features/fast-scraping)\n  - [Batch Scrape](https://docs.firecrawl.dev/features/batch-scrape)\n  - [JSON mode](https://docs.firecrawl.dev/features/llm-extract)\n  - [Change Tracking](https://docs.firecrawl.dev/features/change-tracking)\n  - [Stealth Mode](https://docs.firecrawl.dev/features/stealth-mode)\n  - [Proxies](https://docs.firecrawl.dev/features/proxies)\n  - [Webhooks](https://docs.firecrawl.dev/features/webhooks)\n- [Search](https://docs.firecrawl.dev/features/search)\n- [Map](https://docs.firecrawl.dev/features/map)\n- Crawl",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "Standard Features"
+  },
+  "ebbfda850757150ef20bcd880bc7b764ab6340cb1e3e21fe6c5f77ac3878e061": {
+    "text": "- [Extract](https://docs.firecrawl.dev/features/extract)",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "Agentic Features"
+  },
+  "f4aafb6975ad1d31d4f08d3e91921b5a8e72c53fbc0dda6ada53a5d6b055738a": {
+    "text": "- [Overview](https://docs.firecrawl.dev/use-cases/overview)\n- [AI Platforms](https://docs.firecrawl.dev/use-cases/ai-platforms)\n- [Lead Enrichment](https://docs.firecrawl.dev/use-cases/lead-enrichment)\n- [SEO Platforms](https://docs.firecrawl.dev/use-cases/seo-platforms)\n- [Deep Research](https://docs.firecrawl.dev/use-cases/deep-research)\n- View more",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "Use Cases"
+  },
+  "e6727f81c06cfd0829b120c40d42cfc975f575548d4ff08779402765743d7b21": {
+    "text": "- [Open Source vs Cloud](https://docs.firecrawl.dev/contributing/open-source-or-cloud)\n- [Running locally](https://docs.firecrawl.dev/contributing/guide)\n- [Self-hosting](https://docs.firecrawl.dev/contributing/self-host)\n\nOn this page\n\n- [Overview](https://docs.firecrawl.dev/features/change-tracking#overview)\n- [SDKs](https://docs.firecrawl.dev/features/change-tracking#sdks)\n- [Basic Usage](https://docs.firecrawl.dev/features/change-tracking#basic-usage)\n- [Advanced Options](https://docs.firecrawl.dev/features/change-tracking#advanced-options)\n- [Git-Diff Results Example:](https://docs.firecrawl.dev/features/change-tracking#git-diff-results-example%3A)\n- [JSON Comparison Results Example:](https://docs.firecrawl.dev/features/change-tracking#json-comparison-results-example%3A)\n- [Data Models](https://docs.firecrawl.dev/features/change-tracking#data-models)\n- [Change Tracking Modes](https://docs.firecrawl.dev/features/change-tracking#change-tracking-modes)\n- [Git-Diff Mode](https://docs.firecrawl.dev/features/change-tracking#git-diff-mode)\n- [JSON Mode](https://docs.firecrawl.dev/features/change-tracking#json-mode)\n- [Important Facts](https://docs.firecrawl.dev/features/change-tracking#important-facts)\n- [Examples](https://docs.firecrawl.dev/features/change-tracking#examples)\n- [Basic Scrape Example](https://docs.firecrawl.dev/features/change-tracking#basic-scrape-example)\n- [Crawl Example](https://docs.firecrawl.dev/features/change-tracking#crawl-example)\n- [Tracking Product Price Changes](https://docs.firecrawl.dev/features/change-tracking#tracking-product-price-changes)\n- [Monitoring Content Changes with Git-Diff](https://docs.firecrawl.dev/features/change-tracking#monitoring-content-changes-with-git-diff)\n- [Billing](https://docs.firecrawl.dev/features/change-tracking#billing)\n\n![Change Tracking](https://mintcdn.com/firecrawl/vlKm1oZYK3oSRVTM/images/launch-week/lw3d12.webp?maxW=2400&auto=format&n=vlKm1oZYK3oSRVTM&q=85&s=47792e7d0b2ad6db989ff770e23f5655)Change tracking allows you to monitor and detect changes in web content over time. This feature is available in both the JavaScript and Python SDKs.",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "Contributing"
+  },
+  "ead9f66e2f5e67795d36ddc486ccf9f9fd87c489f648bcd01d02b50605a43097": {
+    "text": "Change tracking enables you to:\n\n- Detect if a webpage has changed since the last scrape\n- View the specific changes between scrapes\n- Get structured data about what has changed\n- Control the visibility of changes\n\nUsing the `changeTracking` format, you can monitor changes on a website and receive information about:\n\n- `previousScrapeAt`: The timestamp of the previous scrape that the current page is being compared against ( `null` if no previous scrape)\n- `changeStatus`: The result of the comparison between the two page versions\n\n  - `new`: This page did not exist or was not discovered before (usually has a `null` `previousScrapeAt`)\n  - `same`: This page’s content has not changed since the last scrape\n  - `changed`: This page’s content has changed since the last scrape\n  - `removed`: This page was removed since the last scrape\n- `visibility`: The visibility of the current page/URL\n\n  - `visible`: This page is visible, meaning that its URL was discovered through an organic route (through links on other visible pages or the sitemap)\n  - `hidden`: This page is not visible, meaning it is still available on the web, but no longer discoverable via the sitemap or crawling the site. We can only identify invisible links if they had been visible, and captured, during a previous crawl or scrape",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "[​](https://docs.firecrawl.dev/features/change-tracking\\#overview)  Overview"
+  },
+  "1240fb1c81a0a08144b1d0c4b506cd0b9202da823489fd712f3922f0cbd3ec87": {
+    "text": "To use change tracking, include `'changeTracking'` in the formats when scraping a URL:\n\nNode\n\nPython\n\nCopy\n\nAsk AI\n\n```\nconst firecrawl = new Firecrawl({ apiKey: 'your-api-key' });\nconst result = await firecrawl.scrape('https://example.com', {\n  formats: ['markdown', 'changeTracking']\n});\n\n// Access change tracking data\nconsole.log(result.changeTracking)\n\n```\n\nExample Response:\n\nCopy\n\nAsk AI\n\n```\n{\n  \"url\": \"https://firecrawl.dev\",\n  \"markdown\": \"# AI Agents for great customer experiences\\n\\nChatbots that delight your users...\",\n  \"changeTracking\": {\n    \"previousScrapeAt\": \"2025-04-10T12:00:00Z\",\n    \"changeStatus\": \"changed\",\n    \"visibility\": \"visible\"\n  }\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "[​](https://docs.firecrawl.dev/features/change-tracking\\#basic-usage)  Basic Usage"
+  },
+  "5c62047458c8f1d0617548ec3700eb10caaa453bc089e5e64db0be8a249a4929": {
+    "text": "You can configure change tracking by passing an object in the `formats` array:\n\nNode\n\nPython\n\nCopy\n\nAsk AI\n\n```\nconst result = await firecrawl.scrape('https://example.com', {\n  formats: [\\\n    'markdown',\\\n    {\\\n      type: 'changeTracking',\\\n      modes: ['git-diff', 'json'], // Enable specific change tracking modes\\\n      schema: {\\\n        type: 'object',\\\n        properties: {\\\n          title: { type: 'string' },\\\n          content: { type: 'string' }\\\n        }\\\n      }, // Schema for structured JSON comparison\\\n      prompt: 'Custom prompt for extraction', // Optional custom prompt\\\n      tag: 'production' // Optional tag for separate change tracking histories\\\n    }\\\n  ]\n});\n\n// Access git-diff format changes\nif (result.changeTracking.diff) {\n  console.log(result.changeTracking.diff.text); // Git-style diff text\n  console.log(result.changeTracking.diff.json); // Structured diff data\n}\n\n// Access JSON comparison changes\nif (result.changeTracking.json) {\n  console.log(result.changeTracking.json.title.previous); // Previous title\n  console.log(result.changeTracking.json.title.current); // Current title\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "[​](https://docs.firecrawl.dev/features/change-tracking\\#advanced-options)  Advanced Options"
+  },
+  "56a09818b24d47b5f31b39d096a682b681dd3c8ea54bf3f2eca9a305be521724": {
+    "text": "Copy\n\nAsk AI\n\n```\n **April, 13 2025**\n\n-**05:55:05 PM**\n+**05:58:57 PM**\n\n...\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "[​](https://docs.firecrawl.dev/features/change-tracking\\#git-diff-results-example%3A)  Git-Diff Results Example:"
+  },
+  "91fe9f7297f95eafb3ebe2a2afcee7da9038e5ffa2d2936878d094d9d49a5e1a": {
+    "text": "Copy\n\nAsk AI\n\n```\n{\n  \"time\": {\n    \"previous\": \"2025-04-13T17:54:32Z\",\n    \"current\": \"2025-04-13T17:55:05Z\"\n  }\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "[​](https://docs.firecrawl.dev/features/change-tracking\\#json-comparison-results-example%3A)  JSON Comparison Results Example:"
+  },
+  "e1a081d6f972f9d547d69f0d88110c8a50fb340cfe88f8329593592a38c4d0fd": {
+    "text": "The change tracking feature includes the following data models:\n\nNode\n\nPython\n\nCopy\n\nAsk AI\n\n```\ninterface FirecrawlDocument {\n  // ... other properties\n  changeTracking?: {\n    previousScrapeAt: string | null;\n    changeStatus: \"new\" | \"same\" | \"changed\" | \"removed\";\n    visibility: \"visible\" | \"hidden\";\n    diff?: {\n      text: string;\n      json: {\n        files: Array<{\n          from: string | null;\n          to: string | null;\n          chunks: Array<{\n            content: string;\n            changes: Array<{\n              type: string;\n              normal?: boolean;\n              ln?: number;\n              ln1?: number;\n              ln2?: number;\n              content: string;\n            }>;\n          }>;\n        }>;\n      };\n    };\n    json?: any;\n  };\n}\n\ninterface ChangeTrackingFormat {\n  type: 'changeTracking';\n  prompt?: string;\n  schema?: any;\n  modes?: (\"json\" | \"git-diff\")[];\n  tag?: string | null;\n}\n\ninterface ScrapeParams {\n  // ... other properties\n  formats?: Array<'markdown' | 'html' | ChangeTrackingFormat>;\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "[​](https://docs.firecrawl.dev/features/change-tracking\\#data-models)  Data Models"
+  },
+  "30d6947011aad4c7239f5b6951eb6983c4db6f1c6b5e39c917efc6aaecff6ec0": {
+    "text": "The change tracking feature supports two modes:",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "[​](https://docs.firecrawl.dev/features/change-tracking\\#change-tracking-modes)  Change Tracking Modes"
+  },
+  "18c94d632077353a2643143f2388070d96a4dceeefd07cbccf5318a5eb32d81c": {
+    "text": "The `git-diff` mode provides a traditional diff format similar to Git’s output. It shows line-by-line changes with additions and deletions marked.Example output:\n\nCopy\n\nAsk AI\n\n```\n@@ -1,1 +1,1 @@\n-old content\n+new content\n\n```\n\nThe structured JSON representation of the diff includes:\n\n- `files`: Array of changed files (in web context, typically just one)\n- `chunks`: Sections of changes within a file\n- `changes`: Individual line changes with type (add, delete, normal)",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "[​](https://docs.firecrawl.dev/features/change-tracking\\#git-diff-mode)  Git-Diff Mode"
+  },
+  "7cdb183e139d9c4de4cf97a82fad45d24ddbfb236a8b6a18d0698918e8ad9d25": {
+    "text": "The `json` mode provides a structured comparison of specific fields extracted from the content. This is useful for tracking changes in specific data points rather than the entire content.Example output:\n\nCopy\n\nAsk AI\n\n```\n{\n  \"title\": {\n    \"previous\": \"Old Title\",\n    \"current\": \"New Title\"\n  },\n  \"price\": {\n    \"previous\": \"$19.99\",\n    \"current\": \"$24.99\"\n  }\n}\n\n```\n\nTo use JSON mode, you need to provide a schema that defines the fields to extract and compare.",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "[​](https://docs.firecrawl.dev/features/change-tracking\\#json-mode)  JSON Mode"
+  },
+  "681184b2db3f5e4dcc167b5a6f6b455afb8c187b3aefa71fb5e97d296d4da1fa": {
+    "text": "Here are some important details to know when using the change tracking feature:\n\n- **Comparison Method**: Scrapes are always compared via their markdown response.  - The `markdown` format must also be specified when using the `changeTracking` format. Other formats may also be specified in addition.\n  - The comparison algorithm is resistant to changes in whitespace and content order. iframe source URLs are currently ignored for resistance against captchas and antibots with randomized URLs.\n- **Matching Previous Scrapes**: Previous scrapes to compare against are currently matched on the source URL, the team ID, the `markdown` format, and the `tag` parameter.  - For an effective comparison, the input URL should be exactly the same as the previous request for the same content.\n  - Crawling the same URLs with different `includePaths`/ `excludePaths` will have inconsistencies when using `changeTracking`.\n  - Scraping the same URLs with different `includeTags`/ `excludeTags`/ `onlyMainContent` will have inconsistencies when using `changeTracking`.\n  - Compared pages will also be compared against previous scrapes that only have the `markdown` format without the `changeTracking` format.\n  - Comparisons are scoped to your team. If you scrape a URL for the first time with your API key, its `changeStatus` will always be `new`, even if other Firecrawl users have scraped it before.\n- **Beta Status**: While in Beta, it is recommended to monitor the `warning` field of the resulting document, and to handle the `changeTracking` object potentially missing from the response.  - This may occur when the database lookup to find the previous scrape to compare against times out.",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "[​](https://docs.firecrawl.dev/features/change-tracking\\#important-facts)  Important Facts"
+  },
+  "4d2b84d73c27e92d47f664d71a2d09c4f79ef1278b7b08f745a6169d0589494f": {
+    "text": "Copy\n\nAsk AI\n\n```\n// Request\n{\n    \"url\": \"https://firecrawl.dev\",\n    \"formats\": [\"markdown\", \"changeTracking\"]\n}\n\n// Response\n{\n  \"success\": true,\n  \"data\": {\n    \"markdown\": \"...\",\n    \"metadata\": {...},\n    \"changeTracking\": {\n      \"previousScrapeAt\": \"2025-03-30T15:07:17.543071+00:00\",\n      \"changeStatus\": \"same\",\n      \"visibility\": \"visible\"\n    }\n  }\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "[​](https://docs.firecrawl.dev/features/change-tracking\\#basic-scrape-example)  Basic Scrape Example"
+  },
+  "17295af0275b12daa6b4d88d9e4f80be770dfa28efd89704dbd00bb5850c6307": {
+    "text": "Copy\n\nAsk AI\n\n```\n// Request\n{\n    \"url\": \"https://firecrawl.dev\",\n    \"scrapeOptions\": {\n        \"formats\": [\"markdown\", \"changeTracking\"]\n    }\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "[​](https://docs.firecrawl.dev/features/change-tracking\\#crawl-example)  Crawl Example"
+  },
+  "81530faaafc3fed49687f09973eaaa185d958103ecdb5f63bc16912697a0a085": {
+    "text": "Node\n\nPython\n\nCopy\n\nAsk AI\n\n```\nconst result = await firecrawl.scrape('https://example.com/product', {\n  formats: [\\\n    'markdown',\\\n    {\\\n      type: 'changeTracking',\\\n      modes: ['json'],\\\n      schema: {\\\n        type: 'object',\\\n        properties: {\\\n          price: { type: 'string' },\\\n          availability: { type: 'string' }\\\n        }\\\n      }\\\n    }\\\n  ]\n});\n\nif (result.changeTracking.changeStatus === 'changed') {\n  console.log(`Price changed from ${result.changeTracking.json.price.previous} to ${result.changeTracking.json.price.current}`);\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "[​](https://docs.firecrawl.dev/features/change-tracking\\#tracking-product-price-changes)  Tracking Product Price Changes"
+  },
+  "589bd9162b725f95e8374d3b76bff0cb8985b64243cbdf197cc4af570aa899d3": {
+    "text": "Node\n\nPython\n\nCopy\n\nAsk AI\n\n```\nconst result = await firecrawl.scrape('https://example.com/blog', {\n  formats: [\\\n    'markdown',\\\n    { type: 'changeTracking', modes: ['git-diff'] }\\\n  ]\n});\n\nif (result.changeTracking.changeStatus === 'changed') {\n  console.log('Content changes:');\n  console.log(result.changeTracking.diff.text);\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "[​](https://docs.firecrawl.dev/features/change-tracking\\#monitoring-content-changes-with-git-diff)  Monitoring Content Changes with Git-Diff"
+  },
+  "9b35c005e23aa24492ffe8383b96513090b17c1de499d34cab956c8b52c178da": {
+    "text": "The change tracking feature is currently in beta. Using the basic change tracking functionality and `git-diff` mode has no additional cost. However, if you use the `json` mode for structured data comparison, the page scrape will cost 5 credits per page.\n\n[Suggest edits](https://github.com/firecrawl/firecrawl-docs/edit/main/features/change-tracking.mdx) [Raise issue](https://github.com/firecrawl/firecrawl-docs/issues/new?title=Issue%20on%20docs&body=Path:%20/features/change-tracking)\n\n[JSON mode - Structured result\\\\\n\\\\\nPrevious](https://docs.firecrawl.dev/features/llm-extract) [Stealth Mode\\\\\n\\\\\nNext](https://docs.firecrawl.dev/features/stealth-mode)\n\nAssistant\n\nResponses are generated using AI and may contain mistakes.",
+    "source_url": "https://docs.firecrawl.dev/features/change-tracking",
+    "header": "[​](https://docs.firecrawl.dev/features/change-tracking\\#billing)  Billing"
+  },
+  "4a07f7a876b833d9e00c218ff682ac4492158c4ac902ffaa6919795ebe1b8134": {
+    "text": "[Firecrawl Docs home page![light logo](https://mintcdn.com/firecrawl/iilnMwCX-8eR1yOO/logo/logo.png?maxW=2048&auto=format&n=iilnMwCX-8eR1yOO&q=85&s=5e3a612c8e0081a9aea141847863ef2e)![dark logo](https://mintcdn.com/firecrawl/iilnMwCX-8eR1yOO/logo/logo-dark.png?maxW=2048&auto=format&n=iilnMwCX-8eR1yOO&q=85&s=79e671f437f328387d592ebb303d5922)](https://firecrawl.dev/)\n\nv2\n\nSearch...\n\nCtrl KAsk AI\n\nSearch...\n\nNavigation\n\nScrape\n\nScrape\n\n[Documentation](https://docs.firecrawl.dev/introduction) [SDKs](https://docs.firecrawl.dev/sdks/overview) [Learn](https://www.firecrawl.dev/blog/category/tutorials) [Integrations](https://www.firecrawl.dev/app) [API Reference](https://docs.firecrawl.dev/api-reference/v2-introduction)\n\n[Playground](https://firecrawl.dev/playground)\n[Blog](https://firecrawl.dev/blog)\n[Community](https://discord.gg/gSmWdAkdwd)\n[Changelog](https://firecrawl.dev/changelog)",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "Introduction"
+  },
+  "08e121caf78f50db9ac6f8806f5d99feafb668d00b05b2945ac4f54d2605f03e": {
+    "text": "- [Quickstart](https://docs.firecrawl.dev/introduction)\n- [MCP Server](https://docs.firecrawl.dev/mcp-server)\n- [Migrating from v1 to v2](https://docs.firecrawl.dev/migrate-to-v2)\n- [Rate Limits](https://docs.firecrawl.dev/rate-limits)\n- [Advanced Scraping Guide](https://docs.firecrawl.dev/advanced-scraping-guide)",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "Get Started"
+  },
+  "41014a339d1ebc8a12c3611fabff00fb21ada3f9e3112a7a59b0a721ecc72809": {
+    "text": "- Scrape\n\n\n\n  - [Scrape](https://docs.firecrawl.dev/features/scrape)\n  - [Faster Scraping](https://docs.firecrawl.dev/features/fast-scraping)\n  - [Batch Scrape](https://docs.firecrawl.dev/features/batch-scrape)\n  - [JSON mode](https://docs.firecrawl.dev/features/llm-extract)\n  - [Change Tracking](https://docs.firecrawl.dev/features/change-tracking)\n  - [Stealth Mode](https://docs.firecrawl.dev/features/stealth-mode)\n  - [Proxies](https://docs.firecrawl.dev/features/proxies)\n  - [Webhooks](https://docs.firecrawl.dev/features/webhooks)\n- [Search](https://docs.firecrawl.dev/features/search)\n- [Map](https://docs.firecrawl.dev/features/map)\n- Crawl",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "Standard Features"
+  },
+  "01d413e3cd85a6435d51803890a00fe2fadd0978ff38527648bf448e02159826": {
+    "text": "- [Extract](https://docs.firecrawl.dev/features/extract)",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "Agentic Features"
+  },
+  "8bca3e6b9f30d5a4c72b8c19ceb0bc58f33cc48653771981b69cf89abf76d1ab": {
+    "text": "- [Overview](https://docs.firecrawl.dev/use-cases/overview)\n- [AI Platforms](https://docs.firecrawl.dev/use-cases/ai-platforms)\n- [Lead Enrichment](https://docs.firecrawl.dev/use-cases/lead-enrichment)\n- [SEO Platforms](https://docs.firecrawl.dev/use-cases/seo-platforms)\n- [Deep Research](https://docs.firecrawl.dev/use-cases/deep-research)\n- View more",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "Use Cases"
+  },
+  "363b244cb0440ee8ddd43965f54321ac2f8ce58f943338db864e4c25fd3d5bdb": {
+    "text": "- [Open Source vs Cloud](https://docs.firecrawl.dev/contributing/open-source-or-cloud)\n- [Running locally](https://docs.firecrawl.dev/contributing/guide)\n- [Self-hosting](https://docs.firecrawl.dev/contributing/self-host)\n\nOn this page\n\n- [Scraping a URL with Firecrawl](https://docs.firecrawl.dev/features/scrape#scraping-a-url-with-firecrawl)\n- [/scrape endpoint](https://docs.firecrawl.dev/features/scrape#%2Fscrape-endpoint)\n- [Installation](https://docs.firecrawl.dev/features/scrape#installation)\n- [Usage](https://docs.firecrawl.dev/features/scrape#usage)\n- [Response](https://docs.firecrawl.dev/features/scrape#response)\n- [Scrape Formats](https://docs.firecrawl.dev/features/scrape#scrape-formats)\n- [Extract structured data](https://docs.firecrawl.dev/features/scrape#extract-structured-data)\n- [/scrape (with json) endpoint](https://docs.firecrawl.dev/features/scrape#%2Fscrape-with-json-endpoint)\n- [Extracting without schema](https://docs.firecrawl.dev/features/scrape#extracting-without-schema)\n- [JSON format options](https://docs.firecrawl.dev/features/scrape#json-format-options)\n- [Interacting with the page with Actions](https://docs.firecrawl.dev/features/scrape#interacting-with-the-page-with-actions)\n- [Example](https://docs.firecrawl.dev/features/scrape#example)\n- [Output](https://docs.firecrawl.dev/features/scrape#output)\n- [Location and Language](https://docs.firecrawl.dev/features/scrape#location-and-language)\n- [How it works](https://docs.firecrawl.dev/features/scrape#how-it-works)\n- [Usage](https://docs.firecrawl.dev/features/scrape#usage-2)\n- [Caching and maxAge](https://docs.firecrawl.dev/features/scrape#caching-and-maxage)\n- [Batch scraping multiple URLs](https://docs.firecrawl.dev/features/scrape#batch-scraping-multiple-urls)\n- [How it works](https://docs.firecrawl.dev/features/scrape#how-it-works-2)\n- [Usage](https://docs.firecrawl.dev/features/scrape#usage-3)\n- [Response](https://docs.firecrawl.dev/features/scrape#response-2)\n- [Synchronous](https://docs.firecrawl.dev/features/scrape#synchronous)\n- [Asynchronous](https://docs.firecrawl.dev/features/scrape#asynchronous)\n- [Stealth Mode](https://docs.firecrawl.dev/features/scrape#stealth-mode)\n\nFirecrawl converts web pages into markdown, ideal for LLM applications.\n\n- It manages complexities: proxies, caching, rate limits, js-blocked content\n- Handles dynamic content: dynamic websites, js-rendered sites, PDFs, images\n- Outputs clean markdown, structured data, screenshots or html.\n\nFor details, see the [Scrape Endpoint API Reference](https://docs.firecrawl.dev/api-reference/endpoint/scrape).",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "Contributing"
+  },
+  "4838fad647755d7b984db0780fabd8b548c097cc33c41b24b7a8a26a65d4b67a": {
+    "text": "Used to scrape a URL and get its content.",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#%2Fscrape-endpoint)  /scrape endpoint"
+  },
+  "68e05e6f0519dbe11bd592ed299c319c9dd6c5ff76ef854aac18bcebf17bc7e0": {
+    "text": "Python\n\nNode\n\nCopy\n\nAsk AI\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#installation)  Installation"
+  },
+  "67899f8009a4d022889d700703ace42879993bf9c1abd51715060629b9ce534e": {
+    "text": "from firecrawl import Firecrawl\n\nfirecrawl = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "pip install firecrawl-py"
+  },
+  "17539f22a2647eeaeb916415477d25d85b018b9b893e9b67823988a49ad95cbe": {
+    "text": "Python\n\nNode\n\ncURL\n\nCopy\n\nAsk AI\n\n```\nfrom firecrawl import Firecrawl\n\nfirecrawl = Firecrawl(api_key=\"fc-YOUR-API-KEY\")",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#usage)  Usage"
+  },
+  "0f2fd39b29a9ee4d1396884f816132194979da6202215f8ec1b765c142aac415": {
+    "text": "doc = firecrawl.scrape(\"https://firecrawl.dev\", formats=[\"markdown\", \"html\"])\nprint(doc)\n\n```\n\nFor more details about the parameters, refer to the [API Reference](https://docs.firecrawl.dev/api-reference/endpoint/scrape).",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "Scrape a website:"
+  },
+  "8d7064577b45489360f3f48e764848f93ab26cefa93631c76ec8bc201c882bc9": {
+    "text": "SDKs will return the data object directly. cURL will return the payload exactly as shown below.\n\nCopy\n\nAsk AI\n\n```\n{\n  \"success\": true,\n  \"data\" : {\n    \"markdown\": \"Launch Week I is here! [See our Day 2 Release 🚀](https://www.firecrawl.dev/blog/launch-week-i-day-2-doubled-rate-limits)[💥 Get 2 months free...\",\\\n    \"html\": \"<!DOCTYPE html><html lang=\\\"en\\\" class=\\\"light\\\" style=\\\"color-scheme: light;\\\"><body class=\\\"__variable_36bd41 __variable_d7dc5d font-inter ...\",\\\n    \"metadata\": {\\\n      \"title\": \"Home - Firecrawl\",\\\n      \"description\": \"Firecrawl crawls and converts any website into clean markdown.\",\\\n      \"language\": \"en\",\\\n      \"keywords\": \"Firecrawl,Markdown,Data,Mendable,Langchain\",\\\n      \"robots\": \"follow, index\",\\\n      \"ogTitle\": \"Firecrawl\",\\\n      \"ogDescription\": \"Turn any website into LLM-ready data.\",\\\n      \"ogUrl\": \"https://www.firecrawl.dev/\",\\\n      \"ogImage\": \"https://www.firecrawl.dev/og.png?123\",\\\n      \"ogLocaleAlternate\": [],\\\n      \"ogSiteName\": \"Firecrawl\",\\\n      \"sourceURL\": \"https://firecrawl.dev\",\\\n      \"statusCode\": 200\\\n    }\\\n  }\\\n}\\\n\\\n```\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#response)  Response"
+  },
+  "1e6a110bdf35b3b5b09f714d25b0cd1fea3d02c475dfd1eb8560030107c83774": {
+    "text": "\\\nYou can now choose what formats you want your output in. You can specify multiple output formats. Supported formats are:\\\n\\\n- Markdown ( `markdown`)\\\n- Summary ( `summary`)\\\n- HTML ( `html`)\\\n- Raw HTML ( `rawHtml`) (with no modifications)\\\n- Screenshot ( `screenshot`, with options like `fullPage`, `quality`, `viewport`)\\\n- Links ( `links`)\\\n- JSON ( `json`) \\- structured output\\\n\\\nOutput keys will match the format you choose.\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#scrape-formats)  Scrape Formats\\"
+  },
+  "51237a00f47d8d6186f0a871bc95ec53326e87b84ecdecdd5702e3b1fc39e154": {
+    "text": "\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#extract-structured-data)  Extract structured data\\"
+  },
+  "d4dd5b3b73a02ca2dcdc7deda579be773fef65ab8497438bc0ce8c55d397c1f1": {
+    "text": "\\\nUsed to extract structured data from scraped pages.\\\n\\\nPython\\\n\\\nNode\\\n\\\ncURL\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\nfrom firecrawl import Firecrawl\\\nfrom pydantic import BaseModel\\\napp = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\\\n\\\nclass JsonSchema(BaseModel):\\\n    company_mission: str\\\n    supports_sso: bool\\\n    is_open_source: bool\\\n    is_in_yc: bool\\\n\\\nresult = app.scrape(\\\n    'https://firecrawl.dev',\\\n    formats=[{\\\n      \"type\": \"json\",\\\n      \"schema\": JsonSchema\\\n    }],\\\n    only_main_content=False,\\\n    timeout=120000\\\n)\\\n\\\nprint(result)\\\n\\\n```\\\n\\\nOutput:\\\n\\\nJSON\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\n{\\\n    \"success\": true,\\\n    \"data\": {\\\n      \"json\": {\\\n        \"company_mission\": \"AI-powered web scraping and data extraction\",\\\n        \"supports_sso\": true,\\\n        \"is_open_source\": true,\\\n        \"is_in_yc\": true\\\n      },\\\n      \"metadata\": {\\\n        \"title\": \"Firecrawl\",\\\n        \"description\": \"AI-powered web scraping and data extraction\",\\\n        \"robots\": \"follow, index\",\\\n        \"ogTitle\": \"Firecrawl\",\\\n        \"ogDescription\": \"AI-powered web scraping and data extraction\",\\\n        \"ogUrl\": \"https://firecrawl.dev/\",\\\n        \"ogImage\": \"https://firecrawl.dev/og.png\",\\\n        \"ogLocaleAlternate\": [],\\\n        \"ogSiteName\": \"Firecrawl\",\\\n        \"sourceURL\": \"https://firecrawl.dev/\"\\\n      },\\\n    }\\\n}\\\n\\\n```\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#%2Fscrape-with-json-endpoint)  /scrape (with json) endpoint\\"
+  },
+  "3a90f94509b2e22270fc24e515c24e0e6d555d76499651094e143df956343a7a": {
+    "text": "\\\nYou can now extract without a schema by just passing a `prompt` to the endpoint. The llm chooses the structure of the data.\\\n\\\nPython\\\n\\\nNode\\\n\\\ncURL\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\nfrom firecrawl import Firecrawl\\\n\\\napp = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\\\n\\\nresult = app.scrape(\\\n    'https://firecrawl.dev',\\\n    formats=[{\\\n      \"type\": \"json\",\\\n      \"prompt\": \"Extract the company mission from the page.\"\\\n    }],\\\n    only_main_content=False,\\\n    timeout=120000\\\n)\\\n\\\nprint(result)\\\n\\\n```\\\n\\\nOutput:\\\n\\\nJSON\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\n{\\\n    \"success\": true,\\\n    \"data\": {\\\n      \"json\": {\\\n        \"company_mission\": \"AI-powered web scraping and data extraction\",\\\n      },\\\n      \"metadata\": {\\\n        \"title\": \"Firecrawl\",\\\n        \"description\": \"AI-powered web scraping and data extraction\",\\\n        \"robots\": \"follow, index\",\\\n        \"ogTitle\": \"Firecrawl\",\\\n        \"ogDescription\": \"AI-powered web scraping and data extraction\",\\\n        \"ogUrl\": \"https://firecrawl.dev/\",\\\n        \"ogImage\": \"https://firecrawl.dev/og.png\",\\\n        \"ogLocaleAlternate\": [],\\\n        \"ogSiteName\": \"Firecrawl\",\\\n        \"sourceURL\": \"https://firecrawl.dev/\"\\\n      },\\\n    }\\\n}\\\n\\\n```\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#extracting-without-schema)  Extracting without schema\\"
+  },
+  "d636c70f025d3373c9bbb345e3d84236bf2ccee1dc0b4df8866200a455467adc": {
+    "text": "\\\nWhen using the `json` format, pass an object inside `formats` with the following parameters:\\\n\\\n- `schema`: JSON Schema for the structured output.\\\n- `prompt`: Optional prompt to help guide extraction when a schema is present or when you prefer light guidance.\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#json-format-options)  JSON format options\\"
+  },
+  "df77ee93d9c6237e16c7e4b97179b66702d829dab9d21239499a7fd2adb67cd6": {
+    "text": "\\\nFirecrawl allows you to perform various actions on a web page before scraping its content. This is particularly useful for interacting with dynamic content, navigating through pages, or accessing content that requires user interaction.Here is an example of how to use actions to navigate to google.com, search for Firecrawl, click on the first result, and take a screenshot.It is important to almost always use the `wait` action before/after executing other actions to give enough time for the page to load.\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#interacting-with-the-page-with-actions)  Interacting with the page with Actions\\"
+  },
+  "0eecdced2e1fc0f67e49fc9d1aa0e2895e1e71434f2fad770d38603ed0860654": {
+    "text": "\\\nPython\\\n\\\nNode\\\n\\\ncURL\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\nfrom firecrawl import Firecrawl\\\n\\\nfirecrawl = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\\\n\\\ndoc = firecrawl.scrape('https://example.com/login', {\\\n  formats=['markdown'],\\\n  actions=[\\\n    { type: 'write', text: 'john@example.com' },\\\n    { type: 'press', key: 'Tab' },\\\n    { type: 'write', text: 'secret' },\\\n    { type: 'click', selector: 'button[type=\"submit\"]' },\\\n    { type: 'wait', milliseconds: 1500 },\\\n    { type: 'screenshot', fullPage: true },\\\n  ],\\\n});\\\n\\\nprint(doc.markdown, doc.screenshot);\\\n\\\n```\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#example)  Example\\"
+  },
+  "d9fb766555d9d0dc22ac6488e9881ba6b617b1554dbef580cb371cd58220b7bb": {
+    "text": "\\\nJSON\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\n{\\\n  \"success\": true,\\\n  \"data\": {\\\n    \"markdown\": \"Our first Launch Week is over! [See the recap 🚀](blog/firecrawl-launch-week-1-recap)...\",\\\n    \"actions\": {\\\n      \"screenshots\": [\\\n        \"https://alttmdsdujxrfnakrkyi.supabase.co/storage/v1/object/public/media/screenshot-75ef2d87-31e0-4349-a478-fb432a29e241.png\"\\\n      ],\\\n      \"scrapes\": [\\\n        {\\\n          \"url\": \"https://www.firecrawl.dev/\",\\\n          \"html\": \"<html><body><h1>Firecrawl</h1></body></html>\"\\\n        }\\\n      ]\\\n    },\\\n    \"metadata\": {\\\n      \"title\": \"Home - Firecrawl\",\\\n      \"description\": \"Firecrawl crawls and converts any website into clean markdown.\",\\\n      \"language\": \"en\",\\\n      \"keywords\": \"Firecrawl,Markdown,Data,Mendable,Langchain\",\\\n      \"robots\": \"follow, index\",\\\n      \"ogTitle\": \"Firecrawl\",\\\n      \"ogDescription\": \"Turn any website into LLM-ready data.\",\\\n      \"ogUrl\": \"https://www.firecrawl.dev/\",\\\n      \"ogImage\": \"https://www.firecrawl.dev/og.png?123\",\\\n      \"ogLocaleAlternate\": [],\\\n      \"ogSiteName\": \"Firecrawl\",\\\n      \"sourceURL\": \"http://google.com\",\\\n      \"statusCode\": 200\\\n    }\\\n  }\\\n}\\\n\\\n```\\\n\\\nFor more details about the actions parameters, refer to the [API Reference](https://docs.firecrawl.dev/api-reference/endpoint/scrape).\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#output)  Output\\"
+  },
+  "64e504a990d41b3efb6b9056618e8294b27c171b7f71b96bda510c5e34503345": {
+    "text": "\\\nSpecify country and preferred languages to get relevant content based on your target location and language preferences.\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#location-and-language)  Location and Language\\"
+  },
+  "b369674a0aeb4e435ffe972632c302372fe754b0b9d24f5a92d00498b6c0b754": {
+    "text": "\\\nWhen you specify the location settings, Firecrawl will use an appropriate proxy if available and emulate the corresponding language and timezone settings. By default, the location is set to ‘US’ if not specified.\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#how-it-works)  How it works\\"
+  },
+  "f0fed08a30c6ec1de953ae3b72dfbd03a8ec532356fc10960090b6c8cfc2d651": {
+    "text": "\\\nTo use the location and language settings, include the `location` object in your request body with the following properties:\\\n\\\n- `country`: ISO 3166-1 alpha-2 country code (e.g., ‘US’, ‘AU’, ‘DE’, ‘JP’). Defaults to ‘US’.\\\n- `languages`: An array of preferred languages and locales for the request in order of priority. Defaults to the language of the specified location.\\\n\\\nPython\\\n\\\nNode\\\n\\\ncURL\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\nfrom firecrawl import Firecrawl\\\n\\\nfirecrawl = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\\\n\\\ndoc = firecrawl.scrape('https://example.com',\\\n    formats=['markdown'],\\\n    location={\\\n        'country': 'US',\\\n        'languages': ['en']\\\n    }\\\n)\\\n\\\nprint(doc)\\\n\\\n```\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#usage-2)  Usage\\"
+  },
+  "ca985a2b98246464d4035dfede14d40a7f17387a779d4eac8731a85567c1ace8": {
+    "text": "\\\nTo make requests faster, Firecrawl serves results from cache by default when a recent copy is available.\\\n\\\n- **Default freshness window**: `maxAge = 172800000` ms (2 days). If a cached page is newer than this, it’s returned instantly; otherwise, the page is scraped and then cached.\\\n- **Performance**: This can speed up scrapes by up to 5x when data doesn’t need to be ultra-fresh.\\\n- **Always fetch fresh**: Set `maxAge` to `0`.\\\n- **Avoid storing**: Set `storeInCache` to `false` if you don’t want Firecrawl to cache/store results for this request.\\\n\\\nExample (force fresh content):\\\n\\\nPython\\\n\\\nNode\\\n\\\ncURL\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\nfrom firecrawl import Firecrawl\\\nfirecrawl = Firecrawl(api_key='fc-YOUR_API_KEY')\\\n\\\ndoc = firecrawl.scrape(url='https://example.com', maxAge=0, formats=['markdown'])\\\nprint(doc)\\\n\\\n```\\\n\\\nExample (use a 10-minute cache window):\\\n\\\nPython\\\n\\\nNode\\\n\\\ncURL\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\nfrom firecrawl import Firecrawl\\\nfirecrawl = Firecrawl(api_key='fc-YOUR_API_KEY')\\\n\\\ndoc = firecrawl.scrape(url='https://example.com', maxAge=600000, formats=['markdown', 'html'])\\\nprint(doc)\\\n\\\n```\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#caching-and-maxage)  Caching and maxAge\\"
+  },
+  "4c8e57a8fee9175f2e09d68a003d02b5e445ad4809f43fcf1466053a82685dae": {
+    "text": "\\\nYou can now batch scrape multiple URLs at the same time. It takes the starting URLs and optional parameters as arguments. The params argument allows you to specify additional options for the batch scrape job, such as the output formats.\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#batch-scraping-multiple-urls)  Batch scraping multiple URLs\\"
+  },
+  "768575a74dcc096193d4ab670d4c987ff1eaeaf44df0ded150a28686a30dd466": {
+    "text": "\\\nIt is very similar to how the `/crawl` endpoint works. It submits a batch scrape job and returns a job ID to check the status of the batch scrape.The sdk provides 2 methods, synchronous and asynchronous. The synchronous method will return the results of the batch scrape job, while the asynchronous method will return a job ID that you can use to check the status of the batch scrape.\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#how-it-works-2)  How it works\\"
+  },
+  "0f238978e6be8287372ebb6e3e19783df0d83a478d1e4b8d13e177633de018d9": {
+    "text": "\\\nPython\\\n\\\nNode\\\n\\\ncURL\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\nfrom firecrawl import Firecrawl\\\n\\\nfirecrawl = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\\\n\\\njob = firecrawl.batch_scrape([\\\n    \"https://firecrawl.dev\",\\\n    \"https://docs.firecrawl.dev\",\\\n], formats=[\"markdown\"], poll_interval=2, wait_timeout=120)\\\n\\\nprint(job)\\\n\\\n```\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#usage-3)  Usage\\"
+  },
+  "d211c4d316fae705194772db1a8ba32868284e75d9da6ce8a064c4e0f8d780be": {
+    "text": "\\\nIf you’re using the sync methods from the SDKs, it will return the results of the batch scrape job. Otherwise, it will return a job ID that you can use to check the status of the batch scrape.\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#response-2)  Response\\"
+  },
+  "5bc11e06cced21e0f9b64c221dec484f720ef65dd7b2b70d8cf50bcef71f4dd6": {
+    "text": "\\\nCompleted\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\n{\\\n  \"status\": \"completed\",\\\n  \"total\": 36,\\\n  \"completed\": 36,\\\n  \"creditsUsed\": 36,\\\n  \"expiresAt\": \"2024-00-00T00:00:00.000Z\",\\\n  \"next\": \"https://api.firecrawl.dev/v1/batch/scrape/123-456-789?skip=26\",\\\n  \"data\": [\\\n    {\\\n      \"markdown\": \"[Firecrawl Docs home page![light logo](https://mintlify.s3-us-west-1.amazonaws.com/firecrawl/logo/light.svg)!...\",\\\n      \"html\": \"<!DOCTYPE html><html lang=\\\"en\\\" class=\\\"js-focus-visible lg:[--scroll-mt:9.5rem]\\\" data-js-focus-visible=\\\"\\\">...\",\\\n      \"metadata\": {\\\n        \"title\": \"Build a 'Chat with website' using Groq Llama 3 | Firecrawl\",\\\n        \"language\": \"en\",\\\n        \"sourceURL\": \"https://docs.firecrawl.dev/learn/rag-llama3\",\\\n        \"description\": \"Learn how to use Firecrawl, Groq Llama 3, and Langchain to build a 'Chat with your website' bot.\",\\\n        \"ogLocaleAlternate\": [],\\\n        \"statusCode\": 200\\\n      }\\\n    },\\\n    ...\\\n  ]\\\n}\\\n\\\n```\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#synchronous)  Synchronous\\"
+  },
+  "041781892e0f6afd331df6c7d5db6c86974a1b3997595d14437acd8847b2d10c": {
+    "text": "\\\nYou can then use the job ID to check the status of the batch scrape by calling the `/batch/scrape/{id}` endpoint. This endpoint is meant to be used while the job is still running or right after it has completed **as batch scrape jobs expire after 24 hours**.\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\n{\\\n  \"success\": true,\\\n  \"id\": \"123-456-789\",\\\n  \"url\": \"https://api.firecrawl.dev/v1/batch/scrape/123-456-789\"\\\n}\\\n\\\n```\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#asynchronous)  Asynchronous\\"
+  },
+  "cb5e3662aa2617034c377d63cff3b7bdc4c877b05910c5036070cab447536e52": {
+    "text": "\\\nFor websites with advanced anti-bot protection, Firecrawl offers a stealth proxy mode that provides better success rates at scraping challenging sites.Learn more about [Stealth Mode](https://docs.firecrawl.dev/features/stealth-mode).\\\n\\\n[Suggest edits](https://github.com/firecrawl/firecrawl-docs/edit/main/features/scrape.mdx) [Raise issue](https://github.com/firecrawl/firecrawl-docs/issues/new?title=Issue%20on%20docs&body=Path:%20/features/scrape)\\\n\\\n[Advanced Scraping Guide\\\\\n\\\\\nPrevious](https://docs.firecrawl.dev/advanced-scraping-guide) [Faster Scraping\\\\\n\\\\\nNext](https://docs.firecrawl.dev/features/fast-scraping)\\\n\\\nAssistant\\\n\\\nResponses are generated using AI and may contain mistakes.",
+    "source_url": "https://docs.firecrawl.dev/features/scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/scrape\\#stealth-mode)  Stealth Mode\\"
+  },
+  "fab6c75f43e91d8ac83ca06253fa35e4ca239fa075e65f1a58fd0f400f5325e4": {
+    "text": "[Firecrawl Docs home page![light logo](https://mintcdn.com/firecrawl/iilnMwCX-8eR1yOO/logo/logo.png?maxW=2048&auto=format&n=iilnMwCX-8eR1yOO&q=85&s=5e3a612c8e0081a9aea141847863ef2e)![dark logo](https://mintcdn.com/firecrawl/iilnMwCX-8eR1yOO/logo/logo-dark.png?maxW=2048&auto=format&n=iilnMwCX-8eR1yOO&q=85&s=79e671f437f328387d592ebb303d5922)](https://firecrawl.dev/)\n\nv2\n\nSearch...\n\nCtrl KAsk AI\n\nSearch...\n\nNavigation\n\nScrape\n\nProxies\n\n[Documentation](https://docs.firecrawl.dev/introduction) [SDKs](https://docs.firecrawl.dev/sdks/overview) [Learn](https://www.firecrawl.dev/blog/category/tutorials) [Integrations](https://www.firecrawl.dev/app) [API Reference](https://docs.firecrawl.dev/api-reference/v2-introduction)\n\n[Playground](https://firecrawl.dev/playground)\n[Blog](https://firecrawl.dev/blog)\n[Community](https://discord.gg/gSmWdAkdwd)\n[Changelog](https://firecrawl.dev/changelog)",
+    "source_url": "https://docs.firecrawl.dev/features/proxies",
+    "header": "Introduction"
+  },
+  "951f43a40185b4c38f5352f3f558557cf0d1204a4d12d4a56c55462e76e56bbf": {
+    "text": "- [Quickstart](https://docs.firecrawl.dev/introduction)\n- [MCP Server](https://docs.firecrawl.dev/mcp-server)\n- [Migrating from v1 to v2](https://docs.firecrawl.dev/migrate-to-v2)\n- [Rate Limits](https://docs.firecrawl.dev/rate-limits)\n- [Advanced Scraping Guide](https://docs.firecrawl.dev/advanced-scraping-guide)",
+    "source_url": "https://docs.firecrawl.dev/features/proxies",
+    "header": "Get Started"
+  },
+  "e9acce2f5b3eb578ddd14d25fcc68227eb13ba24312975ea958612c2eb08cb1d": {
+    "text": "- Scrape\n\n\n\n  - [Scrape](https://docs.firecrawl.dev/features/scrape)\n  - [Faster Scraping](https://docs.firecrawl.dev/features/fast-scraping)\n  - [Batch Scrape](https://docs.firecrawl.dev/features/batch-scrape)\n  - [JSON mode](https://docs.firecrawl.dev/features/llm-extract)\n  - [Change Tracking](https://docs.firecrawl.dev/features/change-tracking)\n  - [Stealth Mode](https://docs.firecrawl.dev/features/stealth-mode)\n  - [Proxies](https://docs.firecrawl.dev/features/proxies)\n  - [Webhooks](https://docs.firecrawl.dev/features/webhooks)\n- [Search](https://docs.firecrawl.dev/features/search)\n- [Map](https://docs.firecrawl.dev/features/map)\n- Crawl",
+    "source_url": "https://docs.firecrawl.dev/features/proxies",
+    "header": "Standard Features"
+  },
+  "17787f1853287d118682f3b94247d53bd32246f7ea8ea2ae5f16bf5ab25706e3": {
+    "text": "- [Extract](https://docs.firecrawl.dev/features/extract)",
+    "source_url": "https://docs.firecrawl.dev/features/proxies",
+    "header": "Agentic Features"
+  },
+  "ca664bb9aba4bf69a7a348eb6d03402e561899d8bdb6fa98bda7eeff161b26fa": {
+    "text": "- [Overview](https://docs.firecrawl.dev/use-cases/overview)\n- [AI Platforms](https://docs.firecrawl.dev/use-cases/ai-platforms)\n- [Lead Enrichment](https://docs.firecrawl.dev/use-cases/lead-enrichment)\n- [SEO Platforms](https://docs.firecrawl.dev/use-cases/seo-platforms)\n- [Deep Research](https://docs.firecrawl.dev/use-cases/deep-research)\n- View more",
+    "source_url": "https://docs.firecrawl.dev/features/proxies",
+    "header": "Use Cases"
+  },
+  "6e973290c7b246e20887fe91ad002889cf2c233731adcf5d41c084a0f8914d6e": {
+    "text": "- [Open Source vs Cloud](https://docs.firecrawl.dev/contributing/open-source-or-cloud)\n- [Running locally](https://docs.firecrawl.dev/contributing/guide)\n- [Self-hosting](https://docs.firecrawl.dev/contributing/self-host)\n\nOn this page\n\n- [Location-Based Proxy Selection](https://docs.firecrawl.dev/features/proxies#location-based-proxy-selection)\n- [How to Specify Proxy Location](https://docs.firecrawl.dev/features/proxies#how-to-specify-proxy-location)\n- [Proxy Types](https://docs.firecrawl.dev/features/proxies#proxy-types)\n\nFirecrawl provides different proxy types to help you scrape websites with varying levels of anti-bot protection. The proxy type can be specified using the `proxy` parameter.\n\n> By default, Firecrawl routes all requests through proxies to help ensure reliability and access, even if you do not specify a proxy type or location.",
+    "source_url": "https://docs.firecrawl.dev/features/proxies",
+    "header": "Contributing"
+  },
+  "ad7a1d10b1fbc152627a4d6fef2d88b4be2c352c172e8a5bf419ed81120c6fd8": {
+    "text": "Firecrawl automatically selects the best proxy based on your specified or detected location. This helps optimize scraping performance and reliability. However, not all locations are currently supported. The following locations are available:\n\n| Country Code | Country Name | Stealth Mode Support |\n| --- | --- | --- |\n| AE | United Arab Emirates | No |\n| AU | Australia | No |\n| BR | Brazil | Yes |\n| CN | China | No |\n| DE | Germany | Yes |\n| FR | France | Yes |\n| GB | United Kingdom | No |\n| JP | Japan | No |\n| QA | Qatar | No |\n| TR | Turkey | No |\n| US | United States | Yes |\n| VN | Vietnam | No |\n\nThe list of supported proxy locations was last updated on May 15, 2025. Availability may change over time.\n\nIf you need proxies in a location not listed above, please [contact us](mailto:help@firecrawl.com) and let us know your requirements.If you do not specify a proxy or location, Firecrawl will automatically select the best option based on the target site and your request.",
+    "source_url": "https://docs.firecrawl.dev/features/proxies",
+    "header": "[​](https://docs.firecrawl.dev/features/proxies\\#location-based-proxy-selection)  Location-Based Proxy Selection"
+  },
+  "c302a8825c72f9cfd6a42d2cc110832f3b6135f55572a92c9f71f1dcfc2f7ed9": {
+    "text": "You can request a specific proxy location by setting the `location.country` parameter in your request. For example, to use a Brazilian proxy, set `location.country` to `BR`.For full details, see the [API reference for `location.country`](https://docs.firecrawl.dev/api-reference/endpoint/scrape#body-location).\n\nPython\n\nNode\n\ncURL\n\nCopy\n\nAsk AI\n\n```\nfrom firecrawl import Firecrawl\n\nfirecrawl = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\n\ndoc = firecrawl.scrape('https://example.com',\n    formats=['markdown'],\n    location={\n        'country': 'US',\n        'languages': ['en']\n    }\n)\n\nprint(doc)\n\n```\n\nIf you request a country where a proxy is not available, Firecrawl will use the closest available region (EU or US) and set the browser location to your requested country.",
+    "source_url": "https://docs.firecrawl.dev/features/proxies",
+    "header": "[​](https://docs.firecrawl.dev/features/proxies\\#how-to-specify-proxy-location)  How to Specify Proxy Location"
+  },
+  "8ff96147a344d8f7f8c85ad91ccdd28dcec01b3dd9afe504968bd45624efc9f6": {
+    "text": "Firecrawl supports three types of proxies:\n\n- **basic**: Proxies for scraping sites with none to basic anti-bot solutions. Fast and usually works.\n- **stealth**: Stealth proxies for scraping sites with advanced anti-bot solutions, or for sites that block regular proxies. Slower, but more reliable on certain sites. [Learn more about Stealth Mode →](https://docs.firecrawl.dev/features/stealth-mode)\n- **auto**: Firecrawl will automatically retry scraping with stealth proxies if the basic proxy fails. If the retry with stealth is successful, 5 credits will be billed for the scrape. If the first attempt with basic is successful, only the regular cost will be billed.\n\n* * *\n\n> **Note:** For detailed information on using stealth proxies, including credit costs and retry strategies, see the [Stealth Mode documentation](https://docs.firecrawl.dev/features/stealth-mode).\n\n[Suggest edits](https://github.com/firecrawl/firecrawl-docs/edit/main/features/proxies.mdx) [Raise issue](https://github.com/firecrawl/firecrawl-docs/issues/new?title=Issue%20on%20docs&body=Path:%20/features/proxies)\n\n[Stealth Mode\\\\\n\\\\\nPrevious](https://docs.firecrawl.dev/features/stealth-mode) [Webhooks\\\\\n\\\\\nNext](https://docs.firecrawl.dev/features/webhooks)\n\nAssistant\n\nResponses are generated using AI and may contain mistakes.",
+    "source_url": "https://docs.firecrawl.dev/features/proxies",
+    "header": "[​](https://docs.firecrawl.dev/features/proxies\\#proxy-types)  Proxy Types"
+  },
+  "56313f4c4c10532ccd58bf27d15c87b0326345afd12dcb3df9e4ef3239ad4cc5": {
+    "text": "[Firecrawl Docs home page![light logo](https://mintlify.s3.us-west-1.amazonaws.com/firecrawl/logo/logo.png)![dark logo](https://mintlify.s3.us-west-1.amazonaws.com/firecrawl/logo/logo-dark.png)](https://firecrawl.dev/)\n\nv2\n\nSearch...\n\nCtrl KAsk AI\n\nSearch...\n\nNavigation\n\nScrape\n\nJSON mode - Structured result\n\n[Documentation](https://docs.firecrawl.dev/introduction) [SDKs](https://docs.firecrawl.dev/sdks/overview) [Learn](https://www.firecrawl.dev/blog/category/tutorials) [Integrations](https://www.firecrawl.dev/app) [API Reference](https://docs.firecrawl.dev/api-reference/v2-introduction)\n\n[Playground](https://firecrawl.dev/playground)\n[Blog](https://firecrawl.dev/blog)\n[Community](https://discord.gg/gSmWdAkdwd)\n[Changelog](https://firecrawl.dev/changelog)",
+    "source_url": "https://docs.firecrawl.dev/features/llm-extract",
+    "header": "Introduction"
+  },
+  "3b211fee615ca7461c80d85da1e9ed35c65948808808ccde197477f9fe11d843": {
+    "text": "- [Quickstart](https://docs.firecrawl.dev/introduction)\n- [MCP Server](https://docs.firecrawl.dev/mcp-server)\n- [Migrating from v1 to v2](https://docs.firecrawl.dev/migrate-to-v2)\n- [Rate Limits](https://docs.firecrawl.dev/rate-limits)\n- [Advanced Scraping Guide](https://docs.firecrawl.dev/advanced-scraping-guide)",
+    "source_url": "https://docs.firecrawl.dev/features/llm-extract",
+    "header": "Get Started"
+  },
+  "4ee3c24c2f36c7b8897a28ee2fdc1ed48877a59cf1391ad8fa468b31b862b1fb": {
+    "text": "- Scrape\n\n\n\n  - [Scrape](https://docs.firecrawl.dev/features/scrape)\n  - [Faster Scraping](https://docs.firecrawl.dev/features/fast-scraping)\n  - [Batch Scrape](https://docs.firecrawl.dev/features/batch-scrape)\n  - [JSON mode](https://docs.firecrawl.dev/features/llm-extract)\n  - [Change Tracking](https://docs.firecrawl.dev/features/change-tracking)\n  - [Stealth Mode](https://docs.firecrawl.dev/features/stealth-mode)\n  - [Proxies](https://docs.firecrawl.dev/features/proxies)\n  - [Webhooks](https://docs.firecrawl.dev/features/webhooks)\n- [Search](https://docs.firecrawl.dev/features/search)\n- [Map](https://docs.firecrawl.dev/features/map)\n- Crawl",
+    "source_url": "https://docs.firecrawl.dev/features/llm-extract",
+    "header": "Standard Features"
+  },
+  "7d8a51c81fa8f2d188e1084fd0b3e51665ccfbd65ff1f46b9075922c5431cd82": {
+    "text": "- [Extract](https://docs.firecrawl.dev/features/extract)",
+    "source_url": "https://docs.firecrawl.dev/features/llm-extract",
+    "header": "Agentic Features"
+  },
+  "3d3132813a3357f5b0d0bc813ed260c984ca9191e6bb25b162a30d8e0982d5fc": {
+    "text": "- [Overview](https://docs.firecrawl.dev/use-cases/overview)\n- [AI Platforms](https://docs.firecrawl.dev/use-cases/ai-platforms)\n- [Lead Enrichment](https://docs.firecrawl.dev/use-cases/lead-enrichment)\n- [SEO Platforms](https://docs.firecrawl.dev/use-cases/seo-platforms)\n- [Deep Research](https://docs.firecrawl.dev/use-cases/deep-research)\n- View more",
+    "source_url": "https://docs.firecrawl.dev/features/llm-extract",
+    "header": "Use Cases"
+  },
+  "52112bb821cc46144c8edcbbe0b886157ea27665ed5ff50257a9053c9d0d0e2b": {
+    "text": "- [Open Source vs Cloud](https://docs.firecrawl.dev/contributing/open-source-or-cloud)\n- [Running locally](https://docs.firecrawl.dev/contributing/guide)\n- [Self-hosting](https://docs.firecrawl.dev/contributing/self-host)\n\nOn this page\n\n- [Scrape and extract structured data with Firecrawl](https://docs.firecrawl.dev/features/llm-extract#scrape-and-extract-structured-data-with-firecrawl)\n- [Extract structured data](https://docs.firecrawl.dev/features/llm-extract#extract-structured-data)\n- [JSON mode via /scrape](https://docs.firecrawl.dev/features/llm-extract#json-mode-via-%2Fscrape)\n- [Structured data without schema](https://docs.firecrawl.dev/features/llm-extract#structured-data-without-schema)\n- [JSON format options](https://docs.firecrawl.dev/features/llm-extract#json-format-options)",
+    "source_url": "https://docs.firecrawl.dev/features/llm-extract",
+    "header": "Contributing"
+  },
+  "f2afed15cd29a33e2dd664560b2d83c19e38a56e129dffcce44c6ce476c3b2fd": {
+    "text": "Firecrawl uses AI to get structured data from web pages in 3 steps:\n\n1. **Set the Schema (optional):**\nDefine a JSON schema (using OpenAI’s format) to specify the data you want, or just provide a `prompt` if you don’t need a strict schema, along with the webpage URL.\n2. **Make the Request:**\nSend your URL and schema to our scrape endpoint using JSON mode. See how here:\n[Scrape Endpoint Documentation](https://docs.firecrawl.dev/api-reference/endpoint/scrape)\n3. **Get Your Data:**\nGet back clean, structured data matching your schema that you can use right away.\n\nThis makes getting web data in the format you need quick and easy.",
+    "source_url": "https://docs.firecrawl.dev/features/llm-extract",
+    "header": "[​](https://docs.firecrawl.dev/features/llm-extract\\#scrape-and-extract-structured-data-with-firecrawl)  Scrape and extract structured data with Firecrawl"
+  },
+  "ef93da39cfe7a9fd79effbf681270b4e9cd30b0ce741e6550e10a3b3b74533cd": {
+    "text": "Used to extract structured data from scraped pages.\n\nPython\n\nNode\n\ncURL\n\nCopy\n\nAsk AI\n\n```\nfrom firecrawl import Firecrawl\nfrom pydantic import BaseModel\napp = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\n\nclass JsonSchema(BaseModel):\n    company_mission: str\n    supports_sso: bool\n    is_open_source: bool\n    is_in_yc: bool\n\nresult = app.scrape(\n    'https://firecrawl.dev',\n    formats=[{\\\n      \"type\": \"json\",\\\n      \"schema\": JsonSchema\\\n    }],\n    only_main_content=False,\n    timeout=120000\n)\n\nprint(result)\n\n```\n\nOutput:\n\nJSON\n\nCopy\n\nAsk AI\n\n```\n{\n    \"success\": true,\n    \"data\": {\n      \"json\": {\n        \"company_mission\": \"AI-powered web scraping and data extraction\",\n        \"supports_sso\": true,\n        \"is_open_source\": true,\n        \"is_in_yc\": true\n      },\n      \"metadata\": {\n        \"title\": \"Firecrawl\",\n        \"description\": \"AI-powered web scraping and data extraction\",\n        \"robots\": \"follow, index\",\n        \"ogTitle\": \"Firecrawl\",\n        \"ogDescription\": \"AI-powered web scraping and data extraction\",\n        \"ogUrl\": \"https://firecrawl.dev/\",\n        \"ogImage\": \"https://firecrawl.dev/og.png\",\n        \"ogLocaleAlternate\": [],\n        \"ogSiteName\": \"Firecrawl\",\n        \"sourceURL\": \"https://firecrawl.dev/\"\n      },\n    }\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/llm-extract",
+    "header": "[​](https://docs.firecrawl.dev/features/llm-extract\\#json-mode-via-%2Fscrape)  JSON mode via /scrape"
+  },
+  "8a0ecbbf84bc71e8a2cedb7d459a441302ae54e40f2a5756cae7c2079513c982": {
+    "text": "You can also extract without a schema by just passing a `prompt` to the endpoint. The llm chooses the structure of the data.\n\nPython\n\nNode\n\ncURL\n\nCopy\n\nAsk AI\n\n```\nfrom firecrawl import Firecrawl\n\napp = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\n\nresult = app.scrape(\n    'https://firecrawl.dev',\n    formats=[{\\\n      \"type\": \"json\",\\\n      \"prompt\": \"Extract the company mission from the page.\"\\\n    }],\n    only_main_content=False,\n    timeout=120000\n)\n\nprint(result)\n\n```\n\nOutput:\n\nJSON\n\nCopy\n\nAsk AI\n\n```\n{\n    \"success\": true,\n    \"data\": {\n      \"json\": {\n        \"company_mission\": \"AI-powered web scraping and data extraction\",\n      },\n      \"metadata\": {\n        \"title\": \"Firecrawl\",\n        \"description\": \"AI-powered web scraping and data extraction\",\n        \"robots\": \"follow, index\",\n        \"ogTitle\": \"Firecrawl\",\n        \"ogDescription\": \"AI-powered web scraping and data extraction\",\n        \"ogUrl\": \"https://firecrawl.dev/\",\n        \"ogImage\": \"https://firecrawl.dev/og.png\",\n        \"ogLocaleAlternate\": [],\n        \"ogSiteName\": \"Firecrawl\",\n        \"sourceURL\": \"https://firecrawl.dev/\"\n      },\n    }\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/llm-extract",
+    "header": "[​](https://docs.firecrawl.dev/features/llm-extract\\#structured-data-without-schema)  Structured data without schema"
+  },
+  "d695870884c78e4cc3616248a21c27b8cf0fda5f562a91e6f76269245f2406b8": {
+    "text": "When using JSON mode, include an object in `formats`, for example:`formats: [{ type: 'json', schema: { ... }, prompt: '...' }]`Parameters:\n\n- `schema`: JSON Schema describing the structured output you want.\n- `prompt`: Optional prompt to guide extraction (also used for no-schema extraction).\n\n[Suggest edits](https://github.com/firecrawl/firecrawl-docs/edit/main/features/llm-extract.mdx) [Raise issue](https://github.com/firecrawl/firecrawl-docs/issues/new?title=Issue%20on%20docs&body=Path:%20/features/llm-extract)\n\n[Batch Scrape\\\\\n\\\\\nPrevious](https://docs.firecrawl.dev/features/batch-scrape) [Change Tracking\\\\\n\\\\\nNext](https://docs.firecrawl.dev/features/change-tracking)\n\nAssistant\n\nResponses are generated using AI and may contain mistakes.",
+    "source_url": "https://docs.firecrawl.dev/features/llm-extract",
+    "header": "[​](https://docs.firecrawl.dev/features/llm-extract\\#json-format-options)  JSON format options"
+  },
+  "7bd0f2405765647a6a2f681b08a94adc309e95dae12e898e368e13809e6b33eb": {
+    "text": "[Firecrawl Docs home page![light logo](https://mintcdn.com/firecrawl/iilnMwCX-8eR1yOO/logo/logo.png?maxW=2048&auto=format&n=iilnMwCX-8eR1yOO&q=85&s=5e3a612c8e0081a9aea141847863ef2e)![dark logo](https://mintcdn.com/firecrawl/iilnMwCX-8eR1yOO/logo/logo-dark.png?maxW=2048&auto=format&n=iilnMwCX-8eR1yOO&q=85&s=79e671f437f328387d592ebb303d5922)](https://firecrawl.dev/)\n\nv2\n\nSearch...\n\nCtrl KAsk AI\n\nSearch...\n\nNavigation\n\nScrape\n\nFaster Scraping\n\n[Documentation](https://docs.firecrawl.dev/introduction) [SDKs](https://docs.firecrawl.dev/sdks/overview) [Learn](https://www.firecrawl.dev/blog/category/tutorials) [Integrations](https://www.firecrawl.dev/app) [API Reference](https://docs.firecrawl.dev/api-reference/v2-introduction)\n\n[Playground](https://firecrawl.dev/playground)\n[Blog](https://firecrawl.dev/blog)\n[Community](https://discord.gg/gSmWdAkdwd)\n[Changelog](https://firecrawl.dev/changelog)",
+    "source_url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "header": "Introduction"
+  },
+  "ee0907cc673e2a126bbb57a68c6f6fdadfabc208b94aadcfed61fad22f6a687f": {
+    "text": "- [Quickstart](https://docs.firecrawl.dev/introduction)\n- [MCP Server](https://docs.firecrawl.dev/mcp-server)\n- [Migrating from v1 to v2](https://docs.firecrawl.dev/migrate-to-v2)\n- [Rate Limits](https://docs.firecrawl.dev/rate-limits)\n- [Advanced Scraping Guide](https://docs.firecrawl.dev/advanced-scraping-guide)",
+    "source_url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "header": "Get Started"
+  },
+  "2ae85d4e0c952def43e37221637e744aa97f2ab8c6d70c497d7c58069b793764": {
+    "text": "- Scrape\n\n\n\n  - [Scrape](https://docs.firecrawl.dev/features/scrape)\n  - [Faster Scraping](https://docs.firecrawl.dev/features/fast-scraping)\n  - [Batch Scrape](https://docs.firecrawl.dev/features/batch-scrape)\n  - [JSON mode](https://docs.firecrawl.dev/features/llm-extract)\n  - [Change Tracking](https://docs.firecrawl.dev/features/change-tracking)\n  - [Stealth Mode](https://docs.firecrawl.dev/features/stealth-mode)\n  - [Proxies](https://docs.firecrawl.dev/features/proxies)\n  - [Webhooks](https://docs.firecrawl.dev/features/webhooks)\n- [Search](https://docs.firecrawl.dev/features/search)\n- [Map](https://docs.firecrawl.dev/features/map)\n- Crawl",
+    "source_url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "header": "Standard Features"
+  },
+  "e35e1949f118a04e6fc61ab891c55e270c9dfe459961919761f74dea7fc87928": {
+    "text": "- [Extract](https://docs.firecrawl.dev/features/extract)",
+    "source_url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "header": "Agentic Features"
+  },
+  "b12e65fe6e41b1e38373ca9b3f47816a88cb1e0b550b881d0dc2f036b2c30ded": {
+    "text": "- [Overview](https://docs.firecrawl.dev/use-cases/overview)\n- [AI Platforms](https://docs.firecrawl.dev/use-cases/ai-platforms)\n- [Lead Enrichment](https://docs.firecrawl.dev/use-cases/lead-enrichment)\n- [SEO Platforms](https://docs.firecrawl.dev/use-cases/seo-platforms)\n- [Deep Research](https://docs.firecrawl.dev/use-cases/deep-research)\n- View more",
+    "source_url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "header": "Use Cases"
+  },
+  "409cbd4654a8573c0c6f2c5d7b77119c3cedbd685d05e88d8887e2fd80a542b8": {
+    "text": "- [Open Source vs Cloud](https://docs.firecrawl.dev/contributing/open-source-or-cloud)\n- [Running locally](https://docs.firecrawl.dev/contributing/guide)\n- [Self-hosting](https://docs.firecrawl.dev/contributing/self-host)\n\nOn this page\n\n- [How It Works](https://docs.firecrawl.dev/features/fast-scraping#how-it-works)\n- [When to Use This](https://docs.firecrawl.dev/features/fast-scraping#when-to-use-this)\n- [Usage](https://docs.firecrawl.dev/features/fast-scraping#usage)\n- [Common maxAge values](https://docs.firecrawl.dev/features/fast-scraping#common-maxage-values)\n- [Performance impact](https://docs.firecrawl.dev/features/fast-scraping#performance-impact)\n- [Important notes](https://docs.firecrawl.dev/features/fast-scraping#important-notes)\n- [Faster crawling](https://docs.firecrawl.dev/features/fast-scraping#faster-crawling)",
+    "source_url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "header": "Contributing"
+  },
+  "1afa24e9397d8f7e27911bf5015dff24f5033bed33e239463a6d090ea29b61b9": {
+    "text": "Firecrawl caches previously scraped pages and, by default, returns a recent copy when available.\n\n- **Default freshness**: `maxAge = 172800000` ms (2 days). If the cached copy is newer than this, it’s returned instantly; otherwise, Firecrawl scrapes fresh and updates the cache.\n- **Force fresh**: Set `maxAge: 0` to always scrape.\n- **Skip caching**: Set `storeInCache: false` if you don’t want to store results for a request.\n\nGet your results **up to 500% faster** when you don’t need the absolute freshest data. Control freshness via `maxAge`:\n\n1. **Return instantly** if we have a recent version of the page\n2. **Scrape fresh** only if our version is older than your specified age\n3. **Save you time** \\- results come back in milliseconds instead of seconds",
+    "source_url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "header": "[​](https://docs.firecrawl.dev/features/fast-scraping\\#how-it-works)  How It Works"
+  },
+  "d429034a116a6905cbfd1710b867de7681a0af290d9b100f61299cd66e0943e1": {
+    "text": "**Great for:**\n\n- Documentation, articles, product pages\n- Bulk processing jobs\n- Development and testing\n- Building knowledge bases\n\n**Skip for:**\n\n- Real-time data (stock prices, live scores, breaking news)\n- Frequently updated content\n- Time-sensitive applications",
+    "source_url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "header": "[​](https://docs.firecrawl.dev/features/fast-scraping\\#when-to-use-this)  When to Use This"
+  },
+  "b65c907b5337f6244ddb73f2e4b2511f3fe59d0a54bb98be87b9bde871e1c518": {
+    "text": "Add `maxAge` to your scrape request. Values are in milliseconds (e.g., `3600000` = 1 hour).\n\nPython\n\nJavaScript\n\nCopy\n\nAsk AI\n\n```\nfrom firecrawl import Firecrawl\n\nfirecrawl = Firecrawl(api_key=\"fc-YOUR_API_KEY\")",
+    "source_url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "header": "[​](https://docs.firecrawl.dev/features/fast-scraping\\#usage)  Usage"
+  },
+  "fc9110201775a879fa7f129fd934909d1949e72581d1adab4691fbc8ad1d1031": {
+    "text": "scrape_result = firecrawl.scrape(\n    'https://firecrawl.dev',\n    formats=['markdown'],\n    maxAge=3600000  # 1 hour in milliseconds\n)\n\nprint(scrape_result['markdown'])\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "header": "This can be 500% faster than a fresh scrape!"
+  },
+  "fbc62c5680d35f62bc58241cbcc86a3c21a0131abddd7cb893473eedd2a32321": {
+    "text": "Here are some helpful reference values:\n\n- **5 minutes**: `300000` \\- For semi-dynamic content\n- **1 hour**: `3600000` \\- For content that updates hourly\n- **1 day**: `86400000` \\- For daily-updated content\n- **1 week**: `604800000` \\- For relatively static content",
+    "source_url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "header": "[​](https://docs.firecrawl.dev/features/fast-scraping\\#common-maxage-values)  Common maxAge values"
+  },
+  "cdb6f4e4a42efb101d55de8f7246f35c486b3f6e9142340ac54f4cbe963d510f": {
+    "text": "With `maxAge` enabled:\n\n- **500% faster response times** for recent content\n- **Instant results** instead of waiting for fresh scrapes",
+    "source_url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "header": "[​](https://docs.firecrawl.dev/features/fast-scraping\\#performance-impact)  Performance impact"
+  },
+  "660ee675d7c1e56b603e0c982fb1e8a32a370f8e55842c8be363443af4e8dd2b": {
+    "text": "- **Default**: `maxAge` is `172800000` (2 days)\n- **Fresh when needed**: If our data is older than `maxAge`, we scrape fresh automatically\n- **No stale data**: You’ll never get data older than your specified `maxAge`",
+    "source_url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "header": "[​](https://docs.firecrawl.dev/features/fast-scraping\\#important-notes)  Important notes"
+  },
+  "525e311b00b8b34e6f304c2d60d515c7b0a268cf6eb5f200cba5219197b7ebc5": {
+    "text": "The same speed benefits apply when crawling multiple pages. Use `maxAge` within `scrapeOptions` to get cached results for pages we’ve seen recently.\n\nPython\n\nJavaScript\n\ncURL\n\nCopy\n\nAsk AI\n\n```\nfrom firecrawl import Firecrawl\n\nfirecrawl = Firecrawl(api_key=\"fc-YOUR_API_KEY\")",
+    "source_url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "header": "[​](https://docs.firecrawl.dev/features/fast-scraping\\#faster-crawling)  Faster crawling"
+  },
+  "13cd41940650f0033118575f2738336cfeb7c2a1bbcc132f6b69001bc288ed9e": {
+    "text": "crawl_result = firecrawl.crawl(\n    'https://firecrawl.dev',\n    limit=100,\n    scrape_options={\n        formats=['markdown'],\n        maxAge=3600000  # Use cached data if less than 1 hour old\n    }\n)\n\nfor page in crawl_result['data']:\n    print(f\"URL: {page['metadata']['sourceURL']}\")\n    print(f\"Content: {page['markdown'][:200]}...\")\n\n```\n\nWhen crawling with `maxAge`, each page in your crawl will benefit from the 500% speed improvement if we have recent cached data for that page.Start using `maxAge` today for dramatically faster scrapes and crawls!\n\n[Suggest edits](https://github.com/firecrawl/firecrawl-docs/edit/main/features/fast-scraping.mdx) [Raise issue](https://github.com/firecrawl/firecrawl-docs/issues/new?title=Issue%20on%20docs&body=Path:%20/features/fast-scraping)\n\n[Scrape\\\\\n\\\\\nPrevious](https://docs.firecrawl.dev/features/scrape) [Batch Scrape\\\\\n\\\\\nNext](https://docs.firecrawl.dev/features/batch-scrape)\n\nAssistant\n\nResponses are generated using AI and may contain mistakes.",
+    "source_url": "https://docs.firecrawl.dev/features/fast-scraping",
+    "header": "Crawl with cached scraping - 500% faster for pages we've seen recently"
+  },
+  "1269a088b95c38c331aa806fd510f3cdaa59f00ce294c2f6cef29a3368cdbced": {
+    "text": "[Firecrawl Docs home page![light logo](https://mintlify.s3.us-west-1.amazonaws.com/firecrawl/logo/logo.png)![dark logo](https://mintlify.s3.us-west-1.amazonaws.com/firecrawl/logo/logo-dark.png)](https://firecrawl.dev/)\n\nv2\n\nSearch...\n\n⌘KAsk AI\n\nSearch...\n\nNavigation\n\nStandard Features\n\nMap\n\n[Documentation](https://docs.firecrawl.dev/introduction) [SDKs](https://docs.firecrawl.dev/sdks/overview) [Learn](https://www.firecrawl.dev/blog/category/tutorials) [Integrations](https://www.firecrawl.dev/app) [API Reference](https://docs.firecrawl.dev/api-reference/v2-introduction)\n\n[Playground](https://firecrawl.dev/playground)\n[Blog](https://firecrawl.dev/blog)\n[Community](https://discord.gg/gSmWdAkdwd)\n[Changelog](https://firecrawl.dev/changelog)",
+    "source_url": "https://docs.firecrawl.dev/features/map",
+    "header": "Introduction"
+  },
+  "4d496f8d0c9316c4cb4ff16d517ce1bd40452d93011993155dd6aa810ee92954": {
+    "text": "- [Quickstart](https://docs.firecrawl.dev/introduction)\n- [MCP Server](https://docs.firecrawl.dev/mcp-server)\n- [Migrating from v1 to v2](https://docs.firecrawl.dev/migrate-to-v2)\n- [Rate Limits](https://docs.firecrawl.dev/rate-limits)\n- [Advanced Scraping Guide](https://docs.firecrawl.dev/advanced-scraping-guide)",
+    "source_url": "https://docs.firecrawl.dev/features/map",
+    "header": "Get Started"
+  },
+  "d5e64b103dc122edb3a9cd8aa03fa611ddb5ac2f3738f7b76003befe91da70df": {
+    "text": "- Scrape\n\n- [Search](https://docs.firecrawl.dev/features/search)\n- [Map](https://docs.firecrawl.dev/features/map)\n- Crawl",
+    "source_url": "https://docs.firecrawl.dev/features/map",
+    "header": "Standard Features"
+  },
+  "10b1784538d3b9c562b559303555e2efbea0afc0fed87ba1850c34e37947d686": {
+    "text": "- [Extract](https://docs.firecrawl.dev/features/extract)",
+    "source_url": "https://docs.firecrawl.dev/features/map",
+    "header": "Agentic Features"
+  },
+  "cf9097e7b56bf28883df7f0dad731920f4e599563e7a57d058903c85a8502a0e": {
+    "text": "- [Overview](https://docs.firecrawl.dev/use-cases/overview)\n- [AI Platforms](https://docs.firecrawl.dev/use-cases/ai-platforms)\n- [Lead Enrichment](https://docs.firecrawl.dev/use-cases/lead-enrichment)\n- [SEO Platforms](https://docs.firecrawl.dev/use-cases/seo-platforms)\n- [Deep Research](https://docs.firecrawl.dev/use-cases/deep-research)\n- View more",
+    "source_url": "https://docs.firecrawl.dev/features/map",
+    "header": "Use Cases"
+  },
+  "33f49448e12dd95e1c50f09fa9690b043f026c894623815599d10c39d96f0123": {
+    "text": "- [Open Source vs Cloud](https://docs.firecrawl.dev/contributing/open-source-or-cloud)\n- [Running locally](https://docs.firecrawl.dev/contributing/guide)\n- [Self-hosting](https://docs.firecrawl.dev/contributing/self-host)\n\nOn this page\n\n- [Introducing /map](https://docs.firecrawl.dev/features/map#introducing-%2Fmap)\n- [Mapping](https://docs.firecrawl.dev/features/map#mapping)\n- [/map endpoint](https://docs.firecrawl.dev/features/map#%2Fmap-endpoint)\n- [Installation](https://docs.firecrawl.dev/features/map#installation)\n- [Usage](https://docs.firecrawl.dev/features/map#usage)\n- [Response](https://docs.firecrawl.dev/features/map#response)\n- [Map with search](https://docs.firecrawl.dev/features/map#map-with-search)\n- [Considerations](https://docs.firecrawl.dev/features/map#considerations)",
+    "source_url": "https://docs.firecrawl.dev/features/map",
+    "header": "Contributing"
+  },
+  "03f6e936c74e6a1739ed8befb8951627bbad73865c6089cef46b3a769507800f": {
+    "text": "The easiest way to go from a single url to a map of the entire website. This is extremely useful for:\n\n- When you need to prompt the end-user to choose which links to scrape\n- Need to quickly know the links on a website\n- Need to scrape pages of a website that are related to a specific topic (use the `search` parameter)\n- Only need to scrape specific pages of a website",
+    "source_url": "https://docs.firecrawl.dev/features/map",
+    "header": "[​](https://docs.firecrawl.dev/features/map\\#introducing-%2Fmap)  Introducing /map"
+  },
+  "fdfe1607e900225f4a268c7494ca6382afeab3f39fe16ad00735317dc76c8185": {
+    "text": "Used to map a URL and get urls of the website. This returns most links present on the website.",
+    "source_url": "https://docs.firecrawl.dev/features/map",
+    "header": "[​](https://docs.firecrawl.dev/features/map\\#%2Fmap-endpoint)  /map endpoint"
+  },
+  "226f1e5b054204cf649dadd1eeaf607efc5d7ae8f206d614770d32f86195739a": {
+    "text": "Python\n\nNode\n\nCopy\n\nAsk AI\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/map",
+    "header": "[​](https://docs.firecrawl.dev/features/map\\#installation)  Installation"
+  },
+  "530ffff3f2d6ae8e70cc204464ccd98c9b1f4c7aa79fab0655197bf77ccc0cd0": {
+    "text": "from firecrawl import Firecrawl\n\nfirecrawl = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/map",
+    "header": "pip install firecrawl-py"
+  },
+  "990bae0d7c52bd4ee367687a439f7efcced43db9afa3283864d970bc1de205cb": {
+    "text": "Python\n\nNode\n\nCopy\n\nAsk AI\n\n```\nfrom firecrawl import Firecrawl\n\nfirecrawl = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\nres = firecrawl.map(url=\"https://firecrawl.dev\", limit=50, sitemap=\"include\")\nprint(res)\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/map",
+    "header": "[​](https://docs.firecrawl.dev/features/map\\#usage)  Usage"
+  },
+  "8dec1ea4f70f4412a15f13d15cb0a4561829eb97f54310a21910467213c74514": {
+    "text": "SDKs will return the data object directly. cURL will return the payload exactly as shown below.\n\nCopy\n\nAsk AI\n\n```\n{\n  \"success\": true,\n  \"links\": [\\\n    {\\\n      \"url\": \"https://docs.firecrawl.dev/features/scrape\",\\\n      \"title\": \"Scrape | Firecrawl\",\\\n      \"description\": \"Turn any url into clean data\"\\\n    },\\\n    {\\\n      \"url\": \"https://www.firecrawl.dev/blog/5_easy_ways_to_access_glm_4_5\",\\\n      \"title\": \"5 Easy Ways to Access GLM-4.5\",\\\n      \"description\": \"Discover how to access GLM-4.5 models locally, through chat applications, via the official API, and using the LLM marketplaces API for seamless integration i...\"\\\n    },\\\n    {\\\n      \"url\": \"https://www.firecrawl.dev/playground\",\\\n      \"title\": \"Playground - Firecrawl\",\\\n      \"description\": \"Preview the API response and get the code snippets for the API\"\\\n    },\\\n    {\\\n      \"url\": \"https://www.firecrawl.dev/?testId=2a7e0542-077b-4eff-bec7-0130395570d6\",\\\n      \"title\": \"Firecrawl - The Web Data API for AI\",\\\n      \"description\": \"The web crawling, scraping, and search API for AI. Built for scale. Firecrawl delivers the entire internet to AI agents and builders. Clean, structured, and ...\"\\\n    },\\\n    {\\\n      \"url\": \"https://www.firecrawl.dev/?testId=af391f07-ca0e-40d3-8ff2-b1ecf2e3fcde\",\\\n      \"title\": \"Firecrawl - The Web Data API for AI\",\\\n      \"description\": \"The web crawling, scraping, and search API for AI. Built for scale. Firecrawl delivers the entire internet to AI agents and builders. Clean, structured, and ...\"\\\n    },\\\n    ...\\\n  ]\n}\n\n```\n\nTitle and description are not always present as it depends on the website.",
+    "source_url": "https://docs.firecrawl.dev/features/map",
+    "header": "[​](https://docs.firecrawl.dev/features/map\\#response)  Response"
+  },
+  "382ab349a73ed712add8d05982db048cdca420d7265545d67ac885f24466deca": {
+    "text": "Map with `search` param allows you to search for specific urls inside a website.\n\ncURL\n\nCopy\n\nAsk AI\n\n```\ncurl -X POST https://api.firecrawl.dev/v2/map \\\n  -H 'Content-Type: application/json' \\\n  -H 'Authorization: Bearer YOUR_API_KEY' \\\n  -d '{\n    \"url\": \"https://firecrawl.dev\",\n    \"search\": \"docs\"\n  }'\n\n```\n\nResponse will be an ordered list from the most relevant to the least relevant.\n\nCopy\n\nAsk AI\n\n```\n{\n  \"status\": \"success\",\n  \"links\": [\\\n    {\\\n      \"url\": \"https://docs.firecrawl.dev\",\\\n      \"title\": \"Firecrawl Docs\",\\\n      \"description\": \"Firecrawl documentation\"\\\n    },\\\n    {\\\n      \"url\": \"https://docs.firecrawl.dev/sdks/python\",\\\n      \"title\": \"Firecrawl Python SDK\",\\\n      \"description\": \"Firecrawl Python SDK documentation\"\\\n    },\\\n    ...\\\n  ]\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/map",
+    "header": "[​](https://docs.firecrawl.dev/features/map\\#map-with-search)  Map with search"
+  },
+  "dbd935b4c76bfb8581302d038e6d16026ce6c00e6fb170667d80556494219c64": {
+    "text": "This endpoint prioritizes speed, so it may not capture all website links. We are working on improvements. Feedback and suggestions are very welcome.\n\n[Suggest edits](https://github.com/firecrawl/firecrawl-docs/edit/main/features/map.mdx) [Raise issue](https://github.com/firecrawl/firecrawl-docs/issues/new?title=Issue%20on%20docs&body=Path:%20/features/map)\n\n[Search\\\\\n\\\\\nPrevious](https://docs.firecrawl.dev/features/search) [Crawl\\\\\n\\\\\nNext](https://docs.firecrawl.dev/features/crawl)\n\nAssistant\n\nResponses are generated using AI and may contain mistakes.",
+    "source_url": "https://docs.firecrawl.dev/features/map",
+    "header": "[​](https://docs.firecrawl.dev/features/map\\#considerations)  Considerations"
+  },
+  "cefb9c852294b8af5d41cdc5d7cf1c2b74d3e34c33e656ba9557f611bd902022": {
+    "text": "[Firecrawl Docs home page![light logo](https://mintlify.s3.us-west-1.amazonaws.com/firecrawl/logo/logo.png)![dark logo](https://mintlify.s3.us-west-1.amazonaws.com/firecrawl/logo/logo-dark.png)](https://firecrawl.dev/)\n\nv2\n\nSearch...\n\n⌘KAsk AI\n\nSearch...\n\nNavigation\n\nCrawl\n\nCrawl\n\n[Documentation](https://docs.firecrawl.dev/introduction) [SDKs](https://docs.firecrawl.dev/sdks/overview) [Learn](https://www.firecrawl.dev/blog/category/tutorials) [Integrations](https://www.firecrawl.dev/app) [API Reference](https://docs.firecrawl.dev/api-reference/v2-introduction)\n\n[Playground](https://firecrawl.dev/playground)\n[Blog](https://firecrawl.dev/blog)\n[Community](https://discord.gg/gSmWdAkdwd)\n[Changelog](https://firecrawl.dev/changelog)",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "Introduction"
+  },
+  "237afb621a78fe42f8c5fd5ab25a7bb9a1d1aa1b7e68015b57458a7ddaa893a6": {
+    "text": "- [Quickstart](https://docs.firecrawl.dev/introduction)\n- [MCP Server](https://docs.firecrawl.dev/mcp-server)\n- [Migrating from v1 to v2](https://docs.firecrawl.dev/migrate-to-v2)\n- [Rate Limits](https://docs.firecrawl.dev/rate-limits)\n- [Advanced Scraping Guide](https://docs.firecrawl.dev/advanced-scraping-guide)",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "Get Started"
+  },
+  "b53c78f5948ad212943d1fab202296d22c005bbd1036755c42832c8cf0dab0af": {
+    "text": "- Scrape\n\n- [Search](https://docs.firecrawl.dev/features/search)\n- [Map](https://docs.firecrawl.dev/features/map)\n- Crawl\n\n\n\n  - [Crawl](https://docs.firecrawl.dev/features/crawl)\n  - [Webhooks](https://docs.firecrawl.dev/features/webhooks)",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "Standard Features"
+  },
+  "4024c193555776ee4ee08807b29c030110dd801c7f82808956d7fd793a284c7e": {
+    "text": "- [Extract](https://docs.firecrawl.dev/features/extract)",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "Agentic Features"
+  },
+  "4ccb86488d18aceac2e7aa1a69c1bd0293307d730f0bb7d931910e8125e8cfcc": {
+    "text": "- [Overview](https://docs.firecrawl.dev/use-cases/overview)\n- [AI Platforms](https://docs.firecrawl.dev/use-cases/ai-platforms)\n- [Lead Enrichment](https://docs.firecrawl.dev/use-cases/lead-enrichment)\n- [SEO Platforms](https://docs.firecrawl.dev/use-cases/seo-platforms)\n- [Deep Research](https://docs.firecrawl.dev/use-cases/deep-research)\n- View more",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "Use Cases"
+  },
+  "d2fac9ae4a40c73f93d77b558fe007b62cd4b064a0d2544077baa6a96473e229": {
+    "text": "- [Open Source vs Cloud](https://docs.firecrawl.dev/contributing/open-source-or-cloud)\n- [Running locally](https://docs.firecrawl.dev/contributing/guide)\n- [Self-hosting](https://docs.firecrawl.dev/contributing/self-host)\n\nOn this page\n\n- [Crawling](https://docs.firecrawl.dev/features/crawl#crawling)\n- [/crawl endpoint](https://docs.firecrawl.dev/features/crawl#%2Fcrawl-endpoint)\n- [Installation](https://docs.firecrawl.dev/features/crawl#installation)\n- [Usage](https://docs.firecrawl.dev/features/crawl#usage)\n- [Scrape options in crawl](https://docs.firecrawl.dev/features/crawl#scrape-options-in-crawl)\n- [API Response](https://docs.firecrawl.dev/features/crawl#api-response)\n- [Check Crawl Job](https://docs.firecrawl.dev/features/crawl#check-crawl-job)\n- [Response Handling](https://docs.firecrawl.dev/features/crawl#response-handling)\n- [SDK methods](https://docs.firecrawl.dev/features/crawl#sdk-methods)\n- [Crawl WebSocket](https://docs.firecrawl.dev/features/crawl#crawl-websocket)\n- [Crawl Webhook](https://docs.firecrawl.dev/features/crawl#crawl-webhook)\n- [Quick Reference](https://docs.firecrawl.dev/features/crawl#quick-reference)\n\nFirecrawl efficiently crawls websites to extract comprehensive data while bypassing blockers. The process:\n\n1. **URL Analysis:** Scans sitemap and crawls website to identify links\n2. **Traversal:** Recursively follows links to find all subpages\n3. **Scraping:** Extracts content from each page, handling JS and rate limits\n4. **Output:** Converts data to clean markdown or structured format\n\nThis ensures thorough data collection from any starting URL.",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "Contributing"
+  },
+  "3c4fde6ea1c487414ae658e53a46f5d926649aba9c46112ade692929e3c593fd": {
+    "text": "Used to crawl a URL and all accessible subpages. This submits a crawl job and returns a job ID to check the status of the crawl.\n\nBy default - Crawl will ignore sublinks of a page if they aren’t children of the url you provide. So, the website.com/other-parent/blog-1 wouldn’t be returned if you crawled website.com/blogs/. If you want website.com/other-parent/blog-1, use the `crawlEntireDomain` parameter. To crawl subdomains like blog.website.com when crawling website.com, use the `allowSubdomains` parameter.",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "[​](https://docs.firecrawl.dev/features/crawl\\#%2Fcrawl-endpoint)  /crawl endpoint"
+  },
+  "3694ccaabc99bf84c3e00808dab0439c8934e8ee33218c3e745c7df831be52b7": {
+    "text": "Python\n\nNode\n\nCopy\n\nAsk AI\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "[​](https://docs.firecrawl.dev/features/crawl\\#installation)  Installation"
+  },
+  "4a951ef45e147a65004d9a40721ec4728931ef7438d0d4cbb917a9bd2ab08867": {
+    "text": "from firecrawl import Firecrawl\n\nfirecrawl = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "pip install firecrawl-py"
+  },
+  "64d8b9ca0faefc3ef5161a786f5feb08783712bea7fd533d6a181c5204e87333": {
+    "text": "Python\n\nNode\n\ncURL\n\nCopy\n\nAsk AI\n\n```\nfrom firecrawl import Firecrawl\n\nfirecrawl = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\n\ndocs = firecrawl.crawl(url=\"https://docs.firecrawl.dev\", limit=10)\nprint(docs)\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "[​](https://docs.firecrawl.dev/features/crawl\\#usage)  Usage"
+  },
+  "b0dfda4b2d55b132868f88574a65a930a705d94a9b2ec9d8e1750d7192e78553": {
+    "text": "All options from the Scrape endpoint are available in Crawl via `scrapeOptions` (JS) / `scrape_options` (Python). These apply to every page the crawler scrapes: formats, proxy, caching, actions, location, tags, etc. See the full list in the [Scrape API Reference](https://docs.firecrawl.dev/api-reference/endpoint/scrape).\n\nNode\n\nPython\n\nCopy\n\nAsk AI\n\n```\nimport Firecrawl from '@mendable/firecrawl-js';\n\nconst firecrawl = new Firecrawl({ apiKey: 'fc-YOUR_API_KEY' });\n\n// Crawl with scrape options\nconst crawlResponse = await firecrawl.crawl('https://example.com', {\n  limit: 100,\n  scrapeOptions: {\n    formats: [\\\n      'markdown',\\\n      { type: 'json', schema: { type: 'object', properties: { title: { type: 'string' } } } }\\\n    ],\n    proxy: 'auto',\n    maxAge: 600000,\n    onlyMainContent: true\n  }\n});\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "[​](https://docs.firecrawl.dev/features/crawl\\#scrape-options-in-crawl)  Scrape options in crawl"
+  },
+  "6ec62e4bd08e80361c257790081f8eda984bc4b91feb3178afc9664b7370e39f": {
+    "text": "If you’re using cURL or the starter method, this will return an `ID` to check the status of the crawl.\n\nIf you’re using the SDK, see methods below for waiter vs starter behavior.\n\nCopy\n\nAsk AI\n\n```\n{\n  \"success\": true,\n  \"id\": \"123-456-789\",\n  \"url\": \"https://api.firecrawl.dev/v1/crawl/123-456-789\"\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "[​](https://docs.firecrawl.dev/features/crawl\\#api-response)  API Response"
+  },
+  "bb2dee3be3465302b956db9dd54a232fbe7678d83711cd4d9f1dc20dd118d380": {
+    "text": "Used to check the status of a crawl job and get its result.\n\nThis endpoint only works for crawls that are in progress or crawls that have completed recently.\n\nPython\n\nNode\n\ncURL\n\nCopy\n\nAsk AI\n\n```\nstatus = firecrawl.get_crawl_status(\"<crawl-id>\")\nprint(status)\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "[​](https://docs.firecrawl.dev/features/crawl\\#check-crawl-job)  Check Crawl Job"
+  },
+  "b7e55ab173716b36c2ec8458a806343473be2c00c916aaa7ada76ce6b3d79556": {
+    "text": "The response varies based on the crawl’s status.For not completed or large responses exceeding 10MB, a `next` URL parameter is provided. You must request this URL to retrieve the next 10MB of data. If the `next` parameter is absent, it indicates the end of the crawl data.The skip parameter sets the maximum number of results returned for each chunk of results returned.\n\nThe skip and next parameter are only relavent when hitting the api directly. If you’re using the SDK, we handle this for you and will return all the results at once.\n\nScraping\n\nCompleted\n\nCopy\n\nAsk AI\n\n```\n{\n  \"status\": \"scraping\",\n  \"total\": 36,\n  \"completed\": 10,\n  \"creditsUsed\": 10,\n  \"expiresAt\": \"2024-00-00T00:00:00.000Z\",\n  \"next\": \"https://api.firecrawl.dev/v1/crawl/123-456-789?skip=10\",\n  \"data\": [\\\n    {\\\n      \"markdown\": \"[Firecrawl Docs home page![light logo](https://mintlify.s3-us-west-1.amazonaws.com/firecrawl/logo/light.svg)!...\",\\\n      \"html\": \"<!DOCTYPE html><html lang=\\\"en\\\" class=\\\"js-focus-visible lg:[--scroll-mt:9.5rem]\\\" data-js-focus-visible=\\\"\\\">...\",\\\n      \"metadata\": {\\\n        \"title\": \"Build a 'Chat with website' using Groq Llama 3 | Firecrawl\",\\\n        \"language\": \"en\",\\\n        \"sourceURL\": \"https://docs.firecrawl.dev/learn/rag-llama3\",\\\n        \"description\": \"Learn how to use Firecrawl, Groq Llama 3, and Langchain to build a 'Chat with your website' bot.\",\\\n        \"ogLocaleAlternate\": [],\\\n        \"statusCode\": 200\\\n      }\\\n    },\\\n    ...\\\n  ]\\\n}\\\n\\\n```\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "[​](https://docs.firecrawl.dev/features/crawl\\#response-handling)  Response Handling"
+  },
+  "dc3549d40ecc288a84fb3644f82c89456622ed9a10e8977b02e060b81ca4f39e": {
+    "text": "\\\nThere are two ways to use the SDK:\\\n\\\n1. **Crawl then wait** ( `crawl`):\\\n   - Waits for the crawl to complete and returns the full response\\\n   - Handles pagination automatically\\\n   - Recommended for most use cases\\\n\\\nPython\\\n\\\nNode\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\nfrom firecrawl import Firecrawl, ScrapeOptions\\\n\\\nfirecrawl = Firecrawl(api_key=\"fc-YOUR_API_KEY\")\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "[​](https://docs.firecrawl.dev/features/crawl\\#sdk-methods)  SDK methods\\"
+  },
+  "392a9428f4da62d6522fb9015fc2e24cac5aa7be58ec8d6d804ab30eb1a61664": {
+    "text": "crawl_status = firecrawl.crawl(\\\n  'https://firecrawl.dev',\\\n  limit=100,\\\n  scrape_options=ScrapeOptions(formats=['markdown', 'html']),\\\n  poll_interval=30\\\n)\\\nprint(crawl_status)\\\n\\\n```\\\n\\\nThe response includes the crawl status and all scraped data:\\\n\\\nPython\\\n\\\nNode\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\nsuccess=True\\\nstatus='completed'\\\ncompleted=100\\\ntotal=100\\\ncreditsUsed=100\\\nexpiresAt=datetime.datetime(2025, 4, 23, 19, 21, 17, tzinfo=TzInfo(UTC))\\\nnext=None\\\ndata=[\\\n  Document(\\\n    markdown='[Day 7 - Launch Week III.Integrations DayApril 14th to 20th](...',\\\n    metadata={\\\n      'title': '15 Python Web Scraping Projects: From Beginner to Advanced',\\\n      ...\\\n      'scrapeId': '97dcf796-c09b-43c9-b4f7-868a7a5af722',\\\n      'sourceURL': 'https://www.firecrawl.dev/blog/python-web-scraping-projects',\\\n      'url': 'https://www.firecrawl.dev/blog/python-web-scraping-projects',\\\n      'statusCode': 200\\\n    }\\\n  ),\\\n  ...\\\n]\\\n\\\n```\\\n\\\n2. **Start then check status** ( `startCrawl`/ `start_crawl`):\\\n   - Returns immediately with a crawl ID\\\n   - Allows manual status checking\\\n   - Useful for long-running crawls or custom polling logic\\\n\\\nPython\\\n\\\nNode\\\n\\\ncURL\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\nfrom firecrawl import Firecrawl\\\n\\\nfirecrawl = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\\\n\\\njob = firecrawl.start_crawl(url=\"https://docs.firecrawl.dev\", limit=10)\\\nprint(job)\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "Crawl a website:\\"
+  },
+  "7a67fffea09f7544ea1722d130f4ca6f01d688e1b239c8cc1336ec8100445c89": {
+    "text": "status = firecrawl.get_crawl_status(job.id)\\\nprint(status)\\\n\\\n```\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "Check the status of the crawl\\"
+  },
+  "756dbde4c2d1539187faf899564b5c709eee28a967891dc660c23f805b481e5b": {
+    "text": "\\\nFirecrawl’s WebSocket-based method, `Crawl URL and Watch`, enables real-time data extraction and monitoring. Start a crawl with a URL and customize it with options like page limits, allowed domains, and output formats, ideal for immediate data processing needs.\\\n\\\nPython\\\n\\\nNode\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\nimport asyncio\\\nfrom firecrawl import AsyncFirecrawl\\\n\\\nasync def main():\\\n    firecrawl = AsyncFirecrawl(api_key=\"fc-YOUR-API-KEY\")\\\n\\\n    # Start a crawl first\\\n    started = await firecrawl.start_crawl(\"https://firecrawl.dev\", limit=5)\\\n\\\n    # Watch updates (snapshots) until terminal status\\\n    async for snapshot in firecrawl.watcher(started.id, kind=\"crawl\", poll_interval=2, timeout=120):\\\n        if snapshot.status == \"completed\":\\\n            print(\"DONE\", snapshot.status)\\\n            for doc in snapshot.data:\\\n                print(\"DOC\", doc.metadata.sourceURL if doc.metadata else None)\\\n        elif snapshot.status == \"failed\":\\\n            print(\"ERR\", snapshot.status)\\\n        else:\\\n            print(\"STATUS\", snapshot.status, snapshot.completed, \"/\", snapshot.total)\\\n\\\nasyncio.run(main())\\\n\\\n```\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "[​](https://docs.firecrawl.dev/features/crawl\\#crawl-websocket)  Crawl WebSocket\\"
+  },
+  "cb73a3307e224514f333a45cfed1fb520466297af2dc70512ec1673f389de818": {
+    "text": "\\\nYou can configure webhooks to receive real-time notifications as your crawl progresses. This allows you to process pages as they’re scraped instead of waiting for the entire crawl to complete.\\\n\\\ncURL\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\ncurl -X POST https://api.firecrawl.dev/v2/crawl \\\\\n    -H 'Content-Type: application/json' \\\\\n    -H 'Authorization: Bearer YOUR_API_KEY' \\\\\n    -d '{\\\n      \"url\": \"https://docs.firecrawl.dev\",\\\n      \"limit\": 100,\\\n      \"webhook\": {\\\n        \"url\": \"https://your-domain.com/webhook\",\\\n        \"metadata\": {\\\n          \"any_key\": \"any_value\"\\\n        },\\\n        \"events\": [\"started\", \"page\", \"completed\"]\\\n      }\\\n    }'\\\n\\\n```\\\n\\\nFor comprehensive webhook documentation including event types, payload structure, and implementation examples, see the [Webhooks documentation](https://docs.firecrawl.dev/features/webhooks).\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "[​](https://docs.firecrawl.dev/features/crawl\\#crawl-webhook)  Crawl Webhook\\"
+  },
+  "bec2a7a8df21097f16852bd957e57541fe403e4716cf63d738dfbede52422bee": {
+    "text": "\\\n**Event Types:**\\\n\\\n- `crawl.started` \\- When the crawl begins\\\n- `crawl.page` \\- For each page successfully scraped\\\n- `crawl.completed` \\- When the crawl finishes\\\n- `crawl.failed` \\- If the crawl encounters an error\\\n\\\n**Basic Payload:**\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\n{\\\n  \"success\": true,\\\n  \"type\": \"crawl.page\",\\\n  \"id\": \"crawl-job-id\",\\\n  \"data\": [...], // Page data for 'page' events\\\n  \"metadata\": {}, // Your custom metadata\\\n  \"error\": null\\\n}\\\n\\\n```\\\n\\\nFor detailed webhook configuration, security best practices, and troubleshooting, visit the [Webhooks documentation](https://docs.firecrawl.dev/features/webhooks).\\\n\\\n[Suggest edits](https://github.com/firecrawl/firecrawl-docs/edit/main/features/crawl.mdx) [Raise issue](https://github.com/firecrawl/firecrawl-docs/issues/new?title=Issue%20on%20docs&body=Path:%20/features/crawl)\\\n\\\n[Map\\\\\n\\\\\nPrevious](https://docs.firecrawl.dev/features/map) [Webhooks\\\\\n\\\\\nNext](https://docs.firecrawl.dev/features/webhooks)\\\n\\\nAssistant\\\n\\\nResponses are generated using AI and may contain mistakes.",
+    "source_url": "https://docs.firecrawl.dev/features/crawl",
+    "header": "[​](https://docs.firecrawl.dev/features/crawl\\#quick-reference)  Quick Reference\\"
+  },
+  "3b1bb9c9b71385edd832910e30f6deff260ee67835bce33cd9ec267f2973a6e9": {
+    "text": "[Firecrawl Docs home page![light logo](https://mintlify.s3.us-west-1.amazonaws.com/firecrawl/logo/logo.png)![dark logo](https://mintlify.s3.us-west-1.amazonaws.com/firecrawl/logo/logo-dark.png)](https://firecrawl.dev/)\n\nv2\n\nSearch...\n\nCtrl KAsk AI\n\nSearch...\n\nNavigation\n\nAgentic Features\n\nExtract\n\n[Documentation](https://docs.firecrawl.dev/introduction) [SDKs](https://docs.firecrawl.dev/sdks/overview) [Learn](https://www.firecrawl.dev/blog/category/tutorials) [Integrations](https://www.firecrawl.dev/app) [API Reference](https://docs.firecrawl.dev/api-reference/v2-introduction)\n\n[Playground](https://firecrawl.dev/playground)\n[Blog](https://firecrawl.dev/blog)\n[Community](https://discord.gg/gSmWdAkdwd)\n[Changelog](https://firecrawl.dev/changelog)",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "Introduction"
+  },
+  "cb7039418f9ddf604d5a8c233c999643638043832455b6bcc925a61853bb3006": {
+    "text": "- [Quickstart](https://docs.firecrawl.dev/introduction)\n- [MCP Server](https://docs.firecrawl.dev/mcp-server)\n- [Migrating from v1 to v2](https://docs.firecrawl.dev/migrate-to-v2)\n- [Rate Limits](https://docs.firecrawl.dev/rate-limits)\n- [Advanced Scraping Guide](https://docs.firecrawl.dev/advanced-scraping-guide)",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "Get Started"
+  },
+  "6e2c20477ddbc4e8273cf96ff0be70590aed31bfb296f99dbc2f8eed67e90a27": {
+    "text": "- Scrape\n\n- [Search](https://docs.firecrawl.dev/features/search)\n- [Map](https://docs.firecrawl.dev/features/map)\n- Crawl",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "Standard Features"
+  },
+  "8e8634e649500a07e78b15ad840a38d233ab48e4bc2be71b5d84a8aa2616d344": {
+    "text": "- [Extract](https://docs.firecrawl.dev/features/extract)",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "Agentic Features"
+  },
+  "9b79b63c37d3f80de517c44136d457daa1fcc12ee8da31a63407573a71e89b0a": {
+    "text": "- [Overview](https://docs.firecrawl.dev/use-cases/overview)\n- [AI Platforms](https://docs.firecrawl.dev/use-cases/ai-platforms)\n- [Lead Enrichment](https://docs.firecrawl.dev/use-cases/lead-enrichment)\n- [SEO Platforms](https://docs.firecrawl.dev/use-cases/seo-platforms)\n- [Deep Research](https://docs.firecrawl.dev/use-cases/deep-research)\n- View more",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "Use Cases"
+  },
+  "079e58ba80331e7d10158a36b662b979aaec30cfd5c6cf9d329c9e3c21d6f54d": {
+    "text": "- [Open Source vs Cloud](https://docs.firecrawl.dev/contributing/open-source-or-cloud)\n- [Running locally](https://docs.firecrawl.dev/contributing/guide)\n- [Self-hosting](https://docs.firecrawl.dev/contributing/self-host)\n\nOn this page\n\n- [Using /extract](https://docs.firecrawl.dev/features/extract#using-%2Fextract)\n- [Example Usage](https://docs.firecrawl.dev/features/extract#example-usage)\n- [Response (sdks)](https://docs.firecrawl.dev/features/extract#response-sdks)\n- [Job status and completion](https://docs.firecrawl.dev/features/extract#job-status-and-completion)\n- [Possible States](https://docs.firecrawl.dev/features/extract#possible-states)\n- [Pending Example](https://docs.firecrawl.dev/features/extract#pending-example)\n- [Completed Example](https://docs.firecrawl.dev/features/extract#completed-example)\n- [Extracting without a Schema](https://docs.firecrawl.dev/features/extract#extracting-without-a-schema)\n- [Improving Results with Web Search](https://docs.firecrawl.dev/features/extract#improving-results-with-web-search)\n- [Example Response with Web Search](https://docs.firecrawl.dev/features/extract#example-response-with-web-search)\n- [Extracting without URLs](https://docs.firecrawl.dev/features/extract#extracting-without-urls)\n- [Known Limitations (Beta)](https://docs.firecrawl.dev/features/extract#known-limitations-beta)\n- [Using FIRE-1](https://docs.firecrawl.dev/features/extract#using-fire-1)\n- [Billing and Usage Tracking](https://docs.firecrawl.dev/features/extract#billing-and-usage-tracking)\n\nThe `/extract` endpoint simplifies collecting structured data from any number of URLs or entire domains. Provide a list of URLs, optionally with wildcards (e.g., `example.com/*`), and a prompt or schema describing the information you want. Firecrawl handles the details of crawling, parsing, and collating large or small datasets.\n\nExtract is billed differently than other endpoints. See the [Extract pricing](https://www.firecrawl.dev/extract#pricing) for details.",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "Contributing"
+  },
+  "7e17ca5875346ba7d93af8f9156660736089fb21c20656e98afb65854f92d073": {
+    "text": "You can extract structured data from one or multiple URLs, including wildcards:\n\n- **Single Page**\n\n\nExample: `https://firecrawl.dev/some-page`\n- **Multiple Pages / Full Domain**\n\n\nExample: `https://firecrawl.dev/*`\n\nWhen you use `/*`, Firecrawl will automatically crawl and parse all URLs it can discover in that domain, then extract the requested data. This feature is experimental; email [help@firecrawl.com](mailto:help@firecrawl.com) if you have issues.",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "[​](https://docs.firecrawl.dev/features/extract\\#using-%2Fextract)  Using `/extract`"
+  },
+  "7d63187c093f1a9220072cc709b2b44b9bd7ec7289a459081bbf1ecd1e43cec0": {
+    "text": "Python\n\nNode\n\ncURL\n\nCopy\n\nAsk AI\n\n```\nfrom firecrawl import Firecrawl\n\nfirecrawl = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\n\nschema = {\n    \"type\": \"object\",\n    \"properties\": {\"description\": {\"type\": \"string\"}},\n    \"required\": [\"description\"],\n}\n\nres = firecrawl.extract(\n    urls=[\"https://docs.firecrawl.dev\"],\n    prompt=\"Extract the page description\",\n    schema=schema,\n)\n\nprint(res.data[\"description\"])\n\n```\n\n**Key Parameters:**\n\n- **urls**: An array of one or more URLs. Supports wildcards ( `/*`) for broader crawling.\n- **prompt** (Optional unless no schema): A natural language prompt describing the data you want or specifying how you want that data structured.\n- **schema** (Optional unless no prompt): A more rigid structure if you already know the JSON layout.\n- **enableWebSearch** (Optional): When `true`, extraction can follow links outside the specified domain.\n\nSee [API Reference](https://docs.firecrawl.dev/api-reference/endpoint/extract) for more details.",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "[​](https://docs.firecrawl.dev/features/extract\\#example-usage)  Example Usage"
+  },
+  "45455dc1ca549447163cffdda4921898e05ad3c0fcdec709256570ff493ad18a": {
+    "text": "JSON\n\nCopy\n\nAsk AI\n\n```\n{\n  \"success\": true,\n  \"data\": {\n    \"company_mission\": \"Firecrawl is the easiest way to extract data from the web. Developers use us to reliably convert URLs into LLM-ready markdown or structured data with a single API call.\",\n    \"supports_sso\": false,\n    \"is_open_source\": true,\n    \"is_in_yc\": true\n  }\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "[​](https://docs.firecrawl.dev/features/extract\\#response-sdks)  Response (sdks)"
+  },
+  "aa2d0dfa000a07caf01cb037b8ae99e4cdde11849be72455f70290cf07fa8aba": {
+    "text": "When you submit an extraction job—either directly via the API or through the starter methods—you’ll receive a Job ID. You can use this ID to:\n\n- Get Job Status: Send a request to the /extract/ endpoint to see if the job is still running or has finished.\n- Wait for results: If you use the default `extract` method (Python/Node), the SDK waits and returns final results.\n- Start then poll: If you use the start methods— `start_extract` (Python) or `startExtract` (Node)—the SDK returns a Job ID immediately. Use `get_extract_status` (Python) or `getExtractStatus` (Node) to check progress.\n\nThis endpoint only works for jobs in progress or recently completed (within 24\nhours).\n\nBelow are code examples for checking an extraction job’s status using Python, Node.js, and cURL:\n\nPython\n\nNode\n\ncURL\n\nCopy\n\nAsk AI\n\n```\nfrom firecrawl import Firecrawl\n\nfirecrawl = Firecrawl(\n    api_key=\"fc-YOUR_API_KEY\"\n)",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "[​](https://docs.firecrawl.dev/features/extract\\#job-status-and-completion)  Job status and completion"
+  },
+  "4526cff48b2e43fa88bcccb757fea78b151c68abb4ca79697586e2abd4766498": {
+    "text": "extract_job = firecrawl.start_extract([\\\n    'https://docs.firecrawl.dev/*',\\\n    'https://firecrawl.dev/'\\\n], prompt=\"Extract the company mission and features from these pages.\")",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "Start an extraction job first"
+  },
+  "949d51cbfa06c5d9ce38545beaa2312d6b4b58a616ef64a2aaa6e0fd428ff5b9": {
+    "text": "job_status = firecrawl.get_extract_status(extract_job.id)\n\nprint(job_status)",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "Get the status of the extraction job"
+  },
+  "6d43113d857a39a4c6ee63a1666dc450304cfe12be84363d9bf0b31a678d12f1": {
+    "text": "```",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "sources=None"
+  },
+  "78be1d10a4f4c14c46306a20d43767eece42584fcbbd4af100a478061e76b4ec": {
+    "text": "- **completed**: The extraction finished successfully.\n- **processing**: Firecrawl is still processing your request.\n- **failed**: An error occurred; data was not fully extracted.\n- **cancelled**: The job was cancelled by the user.",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "[​](https://docs.firecrawl.dev/features/extract\\#possible-states)  Possible States"
+  },
+  "7beafc35abf56a0ce1dd47368ff3da616b5419161552fb6f010d7827ef5b23c8": {
+    "text": "JSON\n\nCopy\n\nAsk AI\n\n```\n{\n  \"success\": true,\n  \"data\": [],\n  \"status\": \"processing\",\n  \"expiresAt\": \"2025-01-08T20:58:12.000Z\"\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "[​](https://docs.firecrawl.dev/features/extract\\#pending-example)  Pending Example"
+  },
+  "b23596b046e61bd4a1b58787a342e3f2c9bc3003f7181ac7f5c44c4557c2f842": {
+    "text": "JSON\n\nCopy\n\nAsk AI\n\n```\n{\n  \"success\": true,\n  \"data\": {\n      \"company_mission\": \"Firecrawl is the easiest way to extract data from the web. Developers use us to reliably convert URLs into LLM-ready markdown or structured data with a single API call.\",\n      \"supports_sso\": false,\n      \"is_open_source\": true,\n      \"is_in_yc\": true\n    },\n  \"status\": \"completed\",\n  \"expiresAt\": \"2025-01-08T20:58:12.000Z\"\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "[​](https://docs.firecrawl.dev/features/extract\\#completed-example)  Completed Example"
+  },
+  "898b3fec8f5ee9c319ed3e7e042176bdf765309df1849def91b59fa598736f6f": {
+    "text": "If you prefer not to define a strict structure, you can simply provide a `prompt`. The underlying model will choose a structure for you, which can be useful for more exploratory or flexible requests.\n\nPython\n\nNode\n\ncURL\n\nCopy\n\nAsk AI\n\n```\nfrom firecrawl import Firecrawl",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "[​](https://docs.firecrawl.dev/features/extract\\#extracting-without-a-schema)  Extracting without a Schema"
+  },
+  "6e92b6534c04e1681be8b1e3a6b3a00c39b0afa98d340dfa278a67a37ba4e949": {
+    "text": "firecrawl = Firecrawl(api_key='your_api_key')\n\ndata = firecrawl.extract([\\\n  'https://docs.firecrawl.dev/',\\\n  'https://firecrawl.dev/'\\\n], prompt=\"Extract Firecrawl's mission from the page.\")\nprint(data)\n\n```\n\nJSON\n\nCopy\n\nAsk AI\n\n```\n{\n  \"success\": true,\n  \"data\": {\n    \"company_mission\": \"Turn websites into LLM-ready data. Power your AI apps with clean data crawled from any website.\"\n  }\n}\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "Initialize the FirecrawlApp with your API key"
+  },
+  "c59d9fbda2dc573bc86f95bb2ea173b0dc174b7e9ef5df0b1a0c635c5b7b5209": {
+    "text": "Setting `enableWebSearch = true` in your request will expand the crawl beyond the provided URL set. This can capture supporting or related information from linked pages.Here’s an example that extracts information about dash cams, enriching the results with data from related pages:\n\nPython\n\nNode\n\ncURL\n\nCopy\n\nAsk AI\n\n```\nfrom firecrawl import Firecrawl",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "[​](https://docs.firecrawl.dev/features/extract\\#improving-results-with-web-search)  Improving Results with Web Search"
+  },
+  "c59041244d26a83b406e6e37af35b64bf02ff18d83a961afaa2a8096934ee8d9": {
+    "text": "firecrawl = Firecrawl(api_key='your_api_key')\n\ndata = firecrawl.extract([\\\n'https://nextbase.com/dash-cams/622gw-dash-cam'\\\n], prompt=\"Extract details about the best dash cams including prices, features, pros/cons and reviews.\", enable_web_search=True)\nprint(data)\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "Initialize the FirecrawlApp with your API key"
+  },
+  "eee41db9a10e8b479b18e19c06e7d5898e06c4c8ebbafa0079219803ecd1fbf0": {
+    "text": "JSON\n\nCopy\n\nAsk AI\n\n```\n{\n  \"success\": true,\n  \"data\": {\n    \"dash_cams\": [\\\n      {\\\n        \"name\": \"Nextbase 622GW\",\\\n        \"price\": \"$399.99\",\\\n        \"features\": [\\\n          \"4K video recording\",\\\n          \"Image stabilization\",\\\n          \"Alexa built-in\",\\\n          \"What3Words integration\"\\\n        ],\\\n        /* Information below enriched with other websites like\\\n        https://www.techradar.com/best/best-dash-cam found\\\n        via enableWebSearch parameter */\\\n        \"pros\": [\\\n          \"Excellent video quality\",\\\n          \"Great night vision\",\\\n          \"Built-in GPS\"\\\n        ],\\\n        \"cons\": [\"Premium price point\", \"App can be finicky\"]\\\n      }\\\n    ],\n  }\n\n```\n\nThe response includes additional context gathered from related pages, providing more comprehensive and accurate information.",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "[​](https://docs.firecrawl.dev/features/extract\\#example-response-with-web-search)  Example Response with Web Search"
+  },
+  "04d7c3b7d603ee221e563bb892007894f754ea929d4e3d594dc390bdec439727": {
+    "text": "The `/extract` endpoint now supports extracting structured data using a prompt without needing specific URLs. This is useful for research or when exact URLs are unknown. Currently in Alpha.\n\nPython\n\nNode\n\ncURL\n\nCopy\n\nAsk AI\n\n```\nfrom pydantic import BaseModel\n\nclass ExtractSchema(BaseModel):\n    company_mission: str",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "[​](https://docs.firecrawl.dev/features/extract\\#extracting-without-urls)  Extracting without URLs"
+  },
+  "3a2ecb55637910e5881550b353e0f881f189699709180f39103d331b5f0dd776": {
+    "text": "prompt = 'Extract the company mission from Firecrawl\\'s website.'",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "Define the prompt for extraction"
+  },
+  "27ddff1d78769de2eb1de4874c327f61ac83b7df0e4c48a1e2bd982bc98d32e6": {
+    "text": "scrape_result = firecrawl.extract(prompt=prompt, schema=ExtractSchema)\n\nprint(scrape_result)\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "Perform the extraction"
+  },
+  "9f93fab1f5d11d4b670c87182d7eb0ca8dbe56a3a98b107b05daaa759100264f": {
+    "text": "1. **Large-Scale Site Coverage**\n\n\nFull coverage of massive sites (e.g., “all products on Amazon”) in a single request is not yet supported.\n2. **Complex Logical Queries**\n\n\nRequests like “find every post from 2025” may not reliably return all expected data. More advanced query capabilities are in progress.\n3. **Occasional Inconsistencies**\n\n\nResults might differ across runs, particularly for very large or dynamic sites. Usually it captures core details, but some variation is possible.\n4. **Beta State**\n\n\nSince `/extract` is still in Beta, features and performance will continue to evolve. We welcome bug reports and feedback to help us improve.",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "[​](https://docs.firecrawl.dev/features/extract\\#known-limitations-beta)  Known Limitations (Beta)"
+  },
+  "da77c9a631254bb3f4c3b8694ace7f9cd4169f539a9d3c0c894e3122f817493b": {
+    "text": "FIRE-1 is an AI agent that enhances Firecrawl’s scraping capabilities. It can controls browser actions and navigates complex website structures to enable comprehensive data extraction beyond traditional scraping methods.You can leverage the FIRE-1 agent with the `/extract` endpoint for complex extraction tasks that require navigation across multiple pages or interaction with elements.**Example (cURL):**\n\nCopy\n\nAsk AI\n\n```\ncurl -X POST https://api.firecrawl.dev/v2/extract \\\n    -H 'Content-Type: application/json' \\\n    -H 'Authorization: Bearer YOUR_API_KEY' \\\n    -d '{\n      \"urls\": [\"https://example-forum.com/topic/123\"],\n      \"prompt\": \"Extract all user comments from this forum thread.\",\n      \"schema\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"comments\": {\n            \"type\": \"array\",\n            \"items\": {\n              \"type\": \"object\",\n              \"properties\": {\n                \"author\": {\"type\": \"string\"},\n                \"comment_text\": {\"type\": \"string\"}\n              },\n              \"required\": [\"author\", \"comment_text\"]\n            }\n          }\n        },\n        \"required\": [\"comments\"]\n      },\n      \"agent\": {\n        \"model\": \"FIRE-1\"\n      }\n    }'\n\n```\n\n> FIRE-1 is already live and available under preview.",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "[​](https://docs.firecrawl.dev/features/extract\\#using-fire-1)  Using FIRE-1"
+  },
+  "0a25c341a3bc0ea39016ff30f6ad2e16c83a65e1bae6bdcb9067a4e273dbbcde": {
+    "text": "You can check our the pricing for /extract on the [Extract landing page pricing page](https://www.firecrawl.dev/extract#pricing) and monitor usage via the [Extract page on the dashboard](https://www.firecrawl.dev/app/extract).Have feedback or need help? Email [help@firecrawl.com](mailto:help@firecrawl.com).\n\n[Suggest edits](https://github.com/firecrawl/firecrawl-docs/edit/main/features/extract.mdx) [Raise issue](https://github.com/firecrawl/firecrawl-docs/issues/new?title=Issue%20on%20docs&body=Path:%20/features/extract)\n\n[Webhooks\\\\\n\\\\\nPrevious](https://docs.firecrawl.dev/features/webhooks) [Use Cases\\\\\n\\\\\nNext](https://docs.firecrawl.dev/use-cases/overview)\n\nAssistant\n\nResponses are generated using AI and may contain mistakes.",
+    "source_url": "https://docs.firecrawl.dev/features/extract",
+    "header": "[​](https://docs.firecrawl.dev/features/extract\\#billing-and-usage-tracking)  Billing and Usage Tracking"
+  },
+  "8570d6276e93d6498f72422bed9059e25e6d992af4c639db459d44b56da357c2": {
+    "text": "[Firecrawl Docs home page![light logo](https://mintcdn.com/firecrawl/iilnMwCX-8eR1yOO/logo/logo.png?maxW=2048&auto=format&n=iilnMwCX-8eR1yOO&q=85&s=5e3a612c8e0081a9aea141847863ef2e)![dark logo](https://mintcdn.com/firecrawl/iilnMwCX-8eR1yOO/logo/logo-dark.png?maxW=2048&auto=format&n=iilnMwCX-8eR1yOO&q=85&s=79e671f437f328387d592ebb303d5922)](https://firecrawl.dev/)\n\nv2\n\nSearch...\n\nCtrl KAsk AI\n\nSearch...\n\nNavigation\n\nScrape\n\nStealth Mode\n\n[Documentation](https://docs.firecrawl.dev/introduction) [SDKs](https://docs.firecrawl.dev/sdks/overview) [Learn](https://www.firecrawl.dev/blog/category/tutorials) [Integrations](https://www.firecrawl.dev/app) [API Reference](https://docs.firecrawl.dev/api-reference/v2-introduction)\n\n[Playground](https://firecrawl.dev/playground)\n[Blog](https://firecrawl.dev/blog)\n[Community](https://discord.gg/gSmWdAkdwd)\n[Changelog](https://firecrawl.dev/changelog)",
+    "source_url": "https://docs.firecrawl.dev/features/stealth-mode",
+    "header": "Introduction"
+  },
+  "17d43c5eaafdd34185186f842dd66acd086c77827461b4902cf402794009d3f6": {
+    "text": "- [Quickstart](https://docs.firecrawl.dev/introduction)\n- [MCP Server](https://docs.firecrawl.dev/mcp-server)\n- [Migrating from v1 to v2](https://docs.firecrawl.dev/migrate-to-v2)\n- [Rate Limits](https://docs.firecrawl.dev/rate-limits)\n- [Advanced Scraping Guide](https://docs.firecrawl.dev/advanced-scraping-guide)",
+    "source_url": "https://docs.firecrawl.dev/features/stealth-mode",
+    "header": "Get Started"
+  },
+  "d372e840b114510a6c3fcab1954cd0dc2f4675b256f2fdb88db5872b81cc5baa": {
+    "text": "- Scrape\n\n\n\n  - [Scrape](https://docs.firecrawl.dev/features/scrape)\n  - [Faster Scraping](https://docs.firecrawl.dev/features/fast-scraping)\n  - [Batch Scrape](https://docs.firecrawl.dev/features/batch-scrape)\n  - [JSON mode](https://docs.firecrawl.dev/features/llm-extract)\n  - [Change Tracking](https://docs.firecrawl.dev/features/change-tracking)\n  - [Stealth Mode](https://docs.firecrawl.dev/features/stealth-mode)\n  - [Proxies](https://docs.firecrawl.dev/features/proxies)\n  - [Webhooks](https://docs.firecrawl.dev/features/webhooks)\n- [Search](https://docs.firecrawl.dev/features/search)\n- [Map](https://docs.firecrawl.dev/features/map)\n- Crawl",
+    "source_url": "https://docs.firecrawl.dev/features/stealth-mode",
+    "header": "Standard Features"
+  },
+  "6cfd34a5ef9f517b24619660bfbd8deee6f1decec4e5f286e48b23b896a96a8a": {
+    "text": "- [Extract](https://docs.firecrawl.dev/features/extract)",
+    "source_url": "https://docs.firecrawl.dev/features/stealth-mode",
+    "header": "Agentic Features"
+  },
+  "86b416c807f1376f7ff54c4625f4b0d9a7d5145e4d81c5e7e66c769568ce3c49": {
+    "text": "- [Overview](https://docs.firecrawl.dev/use-cases/overview)\n- [AI Platforms](https://docs.firecrawl.dev/use-cases/ai-platforms)\n- [Lead Enrichment](https://docs.firecrawl.dev/use-cases/lead-enrichment)\n- [SEO Platforms](https://docs.firecrawl.dev/use-cases/seo-platforms)\n- [Deep Research](https://docs.firecrawl.dev/use-cases/deep-research)\n- View more",
+    "source_url": "https://docs.firecrawl.dev/features/stealth-mode",
+    "header": "Use Cases"
+  },
+  "e47fb931312fcf27d586c9e0f8991d758d40f643857f9d7c5de8ebd582d31f2e": {
+    "text": "- [Open Source vs Cloud](https://docs.firecrawl.dev/contributing/open-source-or-cloud)\n- [Running locally](https://docs.firecrawl.dev/contributing/guide)\n- [Self-hosting](https://docs.firecrawl.dev/contributing/self-host)\n\nOn this page\n\n- [Proxy Types](https://docs.firecrawl.dev/features/stealth-mode#proxy-types)\n- [Using Stealth Mode](https://docs.firecrawl.dev/features/stealth-mode#using-stealth-mode)\n- [Using Stealth as a Retry Mechanism](https://docs.firecrawl.dev/features/stealth-mode#using-stealth-as-a-retry-mechanism)\n\nFirecrawl provides different proxy types to help you scrape websites with varying levels of anti-bot protection. The proxy type can be specified using the `proxy` parameter.",
+    "source_url": "https://docs.firecrawl.dev/features/stealth-mode",
+    "header": "Contributing"
+  },
+  "e8a21c5407d6bcb20ebd3231dd7b17d72a8e8ad0ae144c0fcbd16b92298702f3": {
+    "text": "Firecrawl supports three types of proxies:\n\n- **basic**: Proxies for scraping sites with none to basic anti-bot solutions. Fast and usually works.\n- **stealth**: Stealth proxies for scraping sites with advanced anti-bot solutions. Slower, but more reliable on certain sites.\n- **auto**: Firecrawl will automatically retry scraping with stealth proxies if the basic proxy fails. If the retry with stealth is successful, 5 credits will be billed for the scrape. If the first attempt with basic is successful, only the regular cost will be billed.\n\nIf you do not specify a proxy, Firecrawl will default to basic.",
+    "source_url": "https://docs.firecrawl.dev/features/stealth-mode",
+    "header": "[​](https://docs.firecrawl.dev/features/stealth-mode\\#proxy-types)  Proxy Types"
+  },
+  "da3b42b2add0e0c6e10577c340c725cf1db16aa04ce48a06097eaa599e500b4a": {
+    "text": "When scraping websites with advanced anti-bot protection, you can use the stealth proxy mode to improve your success rate.\n\nPython\n\nNode\n\ncURL\n\nCopy\n\nAsk AI\n\n```\nfrom firecrawl import Firecrawl\n\nfirecrawl = Firecrawl(api_key='fc-YOUR-API-KEY')",
+    "source_url": "https://docs.firecrawl.dev/features/stealth-mode",
+    "header": "[​](https://docs.firecrawl.dev/features/stealth-mode\\#using-stealth-mode)  Using Stealth Mode"
+  },
+  "9e8603f4c2fb8569a15f085a64e8f6ba636d5c41b299cc958057d1bfbff2a1b5": {
+    "text": "doc = firecrawl.scrape('https://example.com', formats=['markdown'], proxy='auto')\n\nprint(doc.warning or 'ok')\n\n```\n\n**Note:** Stealth proxy requests cost 5 credits per request when used.",
+    "source_url": "https://docs.firecrawl.dev/features/stealth-mode",
+    "header": "Choose proxy strategy: 'basic' | 'stealth' | 'auto'"
+  },
+  "fd155ba7182c823d8d69f416d92ef66656d2f18257b1aed13413560652879fb7": {
+    "text": "A common pattern is to first try scraping with the default proxy settings, and then retry with stealth mode if you encounter specific error status codes (401, 403, or 500) in the `metadata.statusCode` field of the response. These status codes can be indicative of the website blocking your request.\n\nPython\n\nNode\n\ncURL\n\nCopy\n\nAsk AI\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/stealth-mode",
+    "header": "[​](https://docs.firecrawl.dev/features/stealth-mode\\#using-stealth-as-a-retry-mechanism)  Using Stealth as a Retry Mechanism"
+  },
+  "63b9701dea105e07a3f8397b79eeb230ca65fcd43ff7daa695975151a87e2ff7": {
+    "text": "from firecrawl import Firecrawl\n\nfirecrawl = Firecrawl(api_key=\"YOUR_API_KEY\")",
+    "source_url": "https://docs.firecrawl.dev/features/stealth-mode",
+    "header": "pip install firecrawl-py"
+  },
+  "ae83f5672d7b33625400d6df05b84c3e0f381ea173c8d85009de2cbbe0ef36fd": {
+    "text": "try:\n    content = firecrawl.scrape(\"https://example.com\")\n\n    # Check if we got an error status code\n    status_code = content.get(\"metadata\", {}).get(\"statusCode\")\n    if status_code in [401, 403, 500]:\n        print(f\"Got status code {status_code}, retrying with stealth proxy\")\n        # Retry with stealth proxy\n        content = firecrawl.scrape(\"https://example.com\", proxy=\"stealth\")\n\n    print(content[\"markdown\"])\nexcept Exception as e:\n    print(f\"Error: {e}\")\n    # Retry with stealth proxy on exception\n    try:\n        content = firecrawl.scrape(\"https://example.com\", proxy=\"stealth\")\n        print(content[\"markdown\"])\n    except Exception as e:\n        print(f\"Stealth proxy also failed: {e}\")\n\n```\n\nThis approach allows you to optimize your credit usage by only using stealth mode when necessary.\n\n[Suggest edits](https://github.com/firecrawl/firecrawl-docs/edit/main/features/stealth-mode.mdx) [Raise issue](https://github.com/firecrawl/firecrawl-docs/issues/new?title=Issue%20on%20docs&body=Path:%20/features/stealth-mode)\n\n[Change Tracking\\\\\n\\\\\nPrevious](https://docs.firecrawl.dev/features/change-tracking) [Proxies\\\\\n\\\\\nNext](https://docs.firecrawl.dev/features/proxies)\n\nAssistant\n\nResponses are generated using AI and may contain mistakes.",
+    "source_url": "https://docs.firecrawl.dev/features/stealth-mode",
+    "header": "First try with basic proxy"
+  },
+  "6b917ac6b22087f1b67f587c5e1070b92268072a15c79f683410402ecb1fee76": {
+    "text": "[Firecrawl Docs home page![light logo](https://mintcdn.com/firecrawl/iilnMwCX-8eR1yOO/logo/logo.png?maxW=2048&auto=format&n=iilnMwCX-8eR1yOO&q=85&s=5e3a612c8e0081a9aea141847863ef2e)![dark logo](https://mintcdn.com/firecrawl/iilnMwCX-8eR1yOO/logo/logo-dark.png?maxW=2048&auto=format&n=iilnMwCX-8eR1yOO&q=85&s=79e671f437f328387d592ebb303d5922)](https://firecrawl.dev/)\n\nv2\n\nSearch...\n\nCtrl KAsk AI\n\nSearch...\n\nNavigation\n\nScrape\n\nBatch Scrape\n\n[Documentation](https://docs.firecrawl.dev/introduction) [SDKs](https://docs.firecrawl.dev/sdks/overview) [Learn](https://www.firecrawl.dev/blog/category/tutorials) [Integrations](https://www.firecrawl.dev/app) [API Reference](https://docs.firecrawl.dev/api-reference/v2-introduction)\n\n[Playground](https://firecrawl.dev/playground)\n[Blog](https://firecrawl.dev/blog)\n[Community](https://discord.gg/gSmWdAkdwd)\n[Changelog](https://firecrawl.dev/changelog)",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "Introduction"
+  },
+  "3a6a3b068c16137489b79021b818fee3ad9fd91bd1a9c5864af61b43e113b716": {
+    "text": "- [Quickstart](https://docs.firecrawl.dev/introduction)\n- [MCP Server](https://docs.firecrawl.dev/mcp-server)\n- [Migrating from v1 to v2](https://docs.firecrawl.dev/migrate-to-v2)\n- [Rate Limits](https://docs.firecrawl.dev/rate-limits)\n- [Advanced Scraping Guide](https://docs.firecrawl.dev/advanced-scraping-guide)",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "Get Started"
+  },
+  "8651837af0d1c1518d7db9d9ec1cf0cc5625c77fe55382d43ddfa955b7290f69": {
+    "text": "- Scrape\n\n\n\n  - [Scrape](https://docs.firecrawl.dev/features/scrape)\n  - [Faster Scraping](https://docs.firecrawl.dev/features/fast-scraping)\n  - [Batch Scrape](https://docs.firecrawl.dev/features/batch-scrape)\n  - [JSON mode](https://docs.firecrawl.dev/features/llm-extract)\n  - [Change Tracking](https://docs.firecrawl.dev/features/change-tracking)\n  - [Stealth Mode](https://docs.firecrawl.dev/features/stealth-mode)\n  - [Proxies](https://docs.firecrawl.dev/features/proxies)\n  - [Webhooks](https://docs.firecrawl.dev/features/webhooks)\n- [Search](https://docs.firecrawl.dev/features/search)\n- [Map](https://docs.firecrawl.dev/features/map)\n- Crawl",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "Standard Features"
+  },
+  "3fe708cf90146a99b2a593f09c2e1833a84724f142d5f9ae5113c1e59d2e393c": {
+    "text": "- [Extract](https://docs.firecrawl.dev/features/extract)",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "Agentic Features"
+  },
+  "75a2857e9e7f17f25fa0c7560129580e598923b62740cd04689d73ee7d491c04": {
+    "text": "- [Overview](https://docs.firecrawl.dev/use-cases/overview)\n- [AI Platforms](https://docs.firecrawl.dev/use-cases/ai-platforms)\n- [Lead Enrichment](https://docs.firecrawl.dev/use-cases/lead-enrichment)\n- [SEO Platforms](https://docs.firecrawl.dev/use-cases/seo-platforms)\n- [Deep Research](https://docs.firecrawl.dev/use-cases/deep-research)\n- View more",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "Use Cases"
+  },
+  "cc820fb6a8eec763457fbd6ebafea340f743b275debe81d9a2e49d453eacbccb": {
+    "text": "- [Open Source vs Cloud](https://docs.firecrawl.dev/contributing/open-source-or-cloud)\n- [Running locally](https://docs.firecrawl.dev/contributing/guide)\n- [Self-hosting](https://docs.firecrawl.dev/contributing/self-host)\n\nOn this page\n\n- [Batch scraping multiple URLs](https://docs.firecrawl.dev/features/batch-scrape#batch-scraping-multiple-urls)\n- [How it works](https://docs.firecrawl.dev/features/batch-scrape#how-it-works)\n- [Usage](https://docs.firecrawl.dev/features/batch-scrape#usage)\n- [Response](https://docs.firecrawl.dev/features/batch-scrape#response)\n- [Batch scrape with structured extraction](https://docs.firecrawl.dev/features/batch-scrape#batch-scrape-with-structured-extraction)\n- [Response](https://docs.firecrawl.dev/features/batch-scrape#response-2)\n- [Batch scrape with webhooks](https://docs.firecrawl.dev/features/batch-scrape#batch-scrape-with-webhooks)\n- [Quick Reference](https://docs.firecrawl.dev/features/batch-scrape#quick-reference)",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "Contributing"
+  },
+  "f716c8a44253b73c077710d3da8770f82f44687dd923ffcf3ffa2048b45b53c0": {
+    "text": "You can now batch scrape multiple URLs at the same time. It takes the starting URLs and optional parameters as arguments. The params argument allows you to specify additional options for the batch scrape job, such as the output formats.",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/batch-scrape\\#batch-scraping-multiple-urls)  Batch scraping multiple URLs"
+  },
+  "1cf8db232d34385d9a0c55832c0b4b4498cc99b6992caa55027198002b2cbe4d": {
+    "text": "It is very similar to how the `/crawl` endpoint works. You can either start the batch and wait for completion, or start it and handle completion yourself.\n\n- `batchScrape` (JS) / `batch_scrape` (Python): starts a batch job and waits for it to complete, returning the results.\n- `startBatchScrape` (JS) / `start_batch_scrape` (Python): starts a batch job and returns the job ID so you can poll or use webhooks.",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/batch-scrape\\#how-it-works)  How it works"
+  },
+  "1a68bd294bf5dd5ae198e549fd1ce71306db2b611145537f6751e6099cf9e386": {
+    "text": "Python\n\nNode\n\ncURL\n\nCopy\n\nAsk AI\n\n```\nfrom firecrawl import Firecrawl\n\nfirecrawl = Firecrawl(api_key=\"fc-YOUR-API-KEY\")\n\nstart = firecrawl.start_batch_scrape([\\\n    \"https://firecrawl.dev\",\\\n    \"https://docs.firecrawl.dev\",\\\n], formats=[\"markdown\"])  # returns id\n\njob = firecrawl.batch_scrape([\\\n    \"https://firecrawl.dev\",\\\n    \"https://docs.firecrawl.dev\",\\\n], formats=[\"markdown\"], poll_interval=2, wait_timeout=120)\n\nprint(job.status, job.completed, job.total)\n\n```",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/batch-scrape\\#usage)  Usage"
+  },
+  "7cac00ee16db060bbbd059947abc35b3fd934d343690f9c1dfa2ae1930714556": {
+    "text": "- Calling `batchScrape`/ `batch_scrape` returns the full results when the batch completes.\n\nCompleted\n\nCopy\n\nAsk AI\n\n```\n{\n  \"status\": \"completed\",\n  \"total\": 36,\n  \"completed\": 36,\n  \"creditsUsed\": 36,\n  \"expiresAt\": \"2024-00-00T00:00:00.000Z\",\n  \"next\": \"https://api.firecrawl.dev/v1/batch/scrape/123-456-789?skip=26\",\n  \"data\": [\\\n    {\\\n      \"markdown\": \"[Firecrawl Docs home page![light logo](https://mintlify.s3-us-west-1.amazonaws.com/firecrawl/logo/light.svg)!...\",\\\n      \"html\": \"<!DOCTYPE html><html lang=\\\"en\\\" class=\\\"js-focus-visible lg:[--scroll-mt:9.5rem]\\\" data-js-focus-visible=\\\"\\\">...\",\\\n      \"metadata\": {\\\n        \"title\": \"Build a 'Chat with website' using Groq Llama 3 | Firecrawl\",\\\n        \"language\": \"en\",\\\n        \"sourceURL\": \"https://docs.firecrawl.dev/learn/rag-llama3\",\\\n        \"description\": \"Learn how to use Firecrawl, Groq Llama 3, and Langchain to build a 'Chat with your website' bot.\",\\\n        \"ogLocaleAlternate\": [],\\\n        \"statusCode\": 200\\\n      }\\\n    },\\\n    ...\\\n  ]\\\n}\\\n\\\n```\\\n\\\n\\`\\\n\\\n- Calling `startBatchScrape`/ `start_batch_scrape` returns a job ID you can track via `getBatchScrapeStatus`/ `get_batch_scrape_status`, using the API endpoint `/batch/scrape/{id}`, or webhooks. This endpoint is intended for in-progress checks or immediately after completion, **as batch jobs expire after 24 hours**.\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\n{\\\n  \"success\": true,\\\n  \"id\": \"123-456-789\",\\\n  \"url\": \"https://api.firecrawl.dev/v1/batch/scrape/123-456-789\"\\\n}\\\n\\\n```\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/batch-scrape\\#response)  Response"
+  },
+  "88fa1a746ee157fd490cd1ba6b1c6ec59dd7ffc81c94f9508d206c4d4db7b1ad": {
+    "text": "\\\nYou can also use the batch scrape endpoint to extract structured data from the pages. This is useful if you want to get the same structured data from a list of URLs.\\\n\\\nPython\\\n\\\nNode\\\n\\\ncURL\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\nfrom firecrawl import Firecrawl\\\n\\\nfirecrawl = Firecrawl(api_key=\"fc-YOUR_API_KEY\")\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/batch-scrape\\#batch-scrape-with-structured-extraction)  Batch scrape with structured extraction\\"
+  },
+  "0416a1078a4ae431789cdca14022576bf079723d3b5041c02b4413197cd84de8": {
+    "text": "batch_scrape_result = firecrawl.batch_scrape(\\\n    ['https://docs.firecrawl.dev', 'https://docs.firecrawl.dev/sdks/overview'],\\\n    formats=[{\\\n        'type': 'json',\\\n        'prompt': 'Extract the title and description from the page.',\\\n        'schema': {\\\n            'type': 'object',\\\n            'properties': {\\\n                'title': {'type': 'string'},\\\n                'description': {'type': 'string'}\\\n            },\\\n            'required': ['title', 'description']\\\n        }\\\n    }]\\\n)\\\nprint(batch_scrape_result)\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "Scrape multiple websites:\\"
+  },
+  "83a492105ff0126978a2fc1f3113e523decb0d4a74e2a3120bc0e289e31cd655": {
+    "text": "batch_scrape_job = firecrawl.start_batch_scrape(\\\n    ['https://docs.firecrawl.dev', 'https://docs.firecrawl.dev/sdks/overview'],\\\n    formats=[{\\\n        'type': 'json',\\\n        'prompt': 'Extract the title and description from the page.',\\\n        'schema': {\\\n            'type': 'object',\\\n            'properties': {\\\n                'title': {'type': 'string'},\\\n                'description': {'type': 'string'}\\\n            },\\\n            'required': ['title', 'description']\\\n        }\\\n    }]\\\n)\\\nprint(batch_scrape_job)\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "Or, you can use the start method:\\"
+  },
+  "fba05e1c713b6bc6ede17ade317fb4c0c1680f4bfc5bc1e51bdd93674dc45817": {
+    "text": "batch_scrape_status = firecrawl.get_batch_scrape_status(batch_scrape_job.id)\\\nprint(batch_scrape_status)\\\n\\\n```\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "You can then use the job ID to check the status of the batch scrape:\\"
+  },
+  "30b608f1e8b74cb4acb8e7a3c909d50548f93d78f8cf66ea11f5237fed1c1cf1": {
+    "text": "\\\n- `batchScrape`/ `batch_scrape` returns full results:\\\n\\\nCompleted\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\n{\\\n  \"status\": \"completed\",\\\n  \"total\": 36,\\\n  \"completed\": 36,\\\n  \"creditsUsed\": 36,\\\n  \"expiresAt\": \"2024-00-00T00:00:00.000Z\",\\\n  \"next\": \"https://api.firecrawl.dev/v1/batch/scrape/123-456-789?skip=26\",\\\n  \"data\": [\\\n    {\\\n      \"json\": {\\\n        \"title\": \"Build a 'Chat with website' using Groq Llama 3 | Firecrawl\",\\\n        \"description\": \"Learn how to use Firecrawl, Groq Llama 3, and Langchain to build a 'Chat with your website' bot.\"\\\n      }\\\n    },\\\n    ...\\\n  ]\\\n}\\\n\\\n```\\\n\\\n- `startBatchScrape`/ `start_batch_scrape` returns a job ID:\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\n{\\\n  \"success\": true,\\\n  \"id\": \"123-456-789\",\\\n  \"url\": \"https://api.firecrawl.dev/v1/batch/scrape/123-456-789\"\\\n}\\\n\\\n```\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/batch-scrape\\#response-2)  Response\\"
+  },
+  "b706e570f6af8c08cc7da19d82be5b7b6c2a6c16d09d69bd23a311646d263655": {
+    "text": "\\\nYou can configure webhooks to receive real-time notifications as each URL in your batch is scraped. This allows you to process results immediately instead of waiting for the entire batch to complete.\\\n\\\ncURL\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\ncurl -X POST https://api.firecrawl.dev/v1/batch/scrape \\\\\n    -H 'Content-Type: application/json' \\\\\n    -H 'Authorization: Bearer YOUR_API_KEY' \\\\\n    -d '{\\\n      \"urls\": [\\\n        \"https://example.com/page1\",\\\n        \"https://example.com/page2\",\\\n        \"https://example.com/page3\"\\\n      ],\\\n      \"webhook\": {\\\n        \"url\": \"https://your-domain.com/webhook\",\\\n        \"metadata\": {\\\n          \"any_key\": \"any_value\"\\\n        },\\\n        \"events\": [\"started\", \"page\", \"completed\"]\\\n      }\\\n    }'\\\n\\\n```\\\n\\\nFor comprehensive webhook documentation including event types, payload structure, and implementation examples, see the [Webhooks documentation](https://docs.firecrawl.dev/features/webhooks).\\\n\\",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/batch-scrape\\#batch-scrape-with-webhooks)  Batch scrape with webhooks\\"
+  },
+  "d209608a8a63b367ef87e34e2c725854f2960fdb5b78870dcb908b1bfae637fb": {
+    "text": "\\\n**Event Types:**\\\n\\\n- `batch_scrape.started` \\- When the batch scrape begins\\\n- `batch_scrape.page` \\- For each URL successfully scraped\\\n- `batch_scrape.completed` \\- When all URLs are processed\\\n- `batch_scrape.failed` \\- If the batch scrape encounters an error\\\n\\\n**Basic Payload:**\\\n\\\nCopy\\\n\\\nAsk AI\\\n\\\n```\\\n{\\\n  \"success\": true,\\\n  \"type\": \"batch_scrape.page\",\\\n  \"id\": \"batch-job-id\",\\\n  \"data\": [...], // Page data for 'page' events\\\n  \"metadata\": {}, // Your custom metadata\\\n  \"error\": null\\\n}\\\n\\\n```\\\n\\\nFor detailed webhook configuration, security best practices, and troubleshooting, visit the [Webhooks documentation](https://docs.firecrawl.dev/features/webhooks).\\\n\\\n[Suggest edits](https://github.com/firecrawl/firecrawl-docs/edit/main/features/batch-scrape.mdx) [Raise issue](https://github.com/firecrawl/firecrawl-docs/issues/new?title=Issue%20on%20docs&body=Path:%20/features/batch-scrape)\\\n\\\n[Faster Scraping\\\\\n\\\\\nPrevious](https://docs.firecrawl.dev/features/fast-scraping) [JSON mode - Structured result\\\\\n\\\\\nNext](https://docs.firecrawl.dev/features/llm-extract)\\\n\\\nAssistant\\\n\\\nResponses are generated using AI and may contain mistakes.",
+    "source_url": "https://docs.firecrawl.dev/features/batch-scrape",
+    "header": "[​](https://docs.firecrawl.dev/features/batch-scrape\\#quick-reference)  Quick Reference\\"
+  }
+}
