@@ -12,8 +12,12 @@ enabled_spacy_entities = ["ORG", "PRODUCT"]
 # Define each documentation target you want to process
 [targets.firecrawl]
 url = "https://docs.firecrawl.dev/"
-page_limit = 500
+page_limit = 2
 
 [targets.langchain]
 url = "https://python.langchain.com/docs/get_started/introduction"
-page_limit = 2000
+page_limit = 2
+
+[targets.mintlify]
+url = "https://mintlify.com/docs"
+page_limit = 1
