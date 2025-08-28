@@ -115,7 +115,7 @@ Scrapes a target website and saves the raw data to the local cache.
 ```Bash
     
 # Scrape the 'langchain' target
-python main.py scrape langchain
+python -m pipeline.main scrape langchain
 ```
   
 
@@ -126,7 +126,7 @@ Loads cached data and generates a Knowledge Pack directory containing the vector
 
     
 # Process the cached 'langchain' data
-python main.py process langchain
+python -m pipeline.main process langchain
 ```
   
 
@@ -136,7 +136,7 @@ Compresses a processed Knowledge Pack directory into a single .tar.gz file for d
 ```Bash
     
 # Create the downloadable archive for 'langchain'
-python main.py package langchain
+python -m pipeline.main package langchain
 ```
   
 
@@ -147,7 +147,7 @@ An all-in-one command that runs the scrape and process stages sequentially.
 
     
 # Run the entire pipeline for the 'langchain' target
-python main.py run langchain
+python -m pipeline.main run langchain
 ```
   
 
