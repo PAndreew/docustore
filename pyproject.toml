@@ -25,6 +25,16 @@ dependencies = [
 dev = [
     "ruff", # An extremely fast Python linter and code formatter
 ]
+# Install these for specific cloud providers
+gcp = ["google-cloud-storage"]
+aws = ["boto3"]
+http = ["requests"]
+# A convenience group to install everything
+all = [
+    "knowledge-pack-api[gcp]",
+    "knowledge-pack-api[aws]",
+    "knowledge-pack-api[http]",
+]
 
 [tool.ruff]
 # Same as Black's default line length

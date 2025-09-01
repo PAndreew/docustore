@@ -5,13 +5,11 @@ import tarfile
 from functools import lru_cache
 
 import chromadb
-from google.cloud import storage
 from sentence_transformers import SentenceTransformer
+from .storage import get_storage_provider  # Import the factory
 
 # --- Configuration ---
-# These would ideally be set via environment variables in Cloud Run
-GCS_BUCKET_NAME = os.environ.get("GCS_BUCKET_NAME", "your-knowledge-packs-bucket")
-LOCAL_CACHE_DIR = "/data" # A writable directory inside the container
+LOCAL_CACHE_DIR = "/data" 
 
 # --- In-Memory Caching for Models and Clients ---
 # This dictionary will hold initialized ChromaDB clients to avoid reloading.
@@ -26,8 +24,8 @@ def get_embedding_model():
 
 def load_knowledge_pack(target: str):
     """
-    Ensures a knowledge pack is available locally, downloading from GCS if needed.
-    Returns an initialized ChromaDB collection object.
+    Ensures a knowledge pack is available locally, using the configured storage
+    provider to download it if needed. Returns a ChromaDB collection.
     """
     if target in chroma_clients:
         return chroma_clients[target]
@@ -36,38 +34,39 @@ def load_knowledge_pack(target: str):
     db_path = os.path.join(target_dir, "db")
 
     if not os.path.exists(db_path):
-        logging.info(f"Knowledge pack for '{target}' not found in local cache. Downloading from GCS...")
+        logging.info(f"Knowledge pack for '{target}' not found in local cache. Using storage provider.")
         os.makedirs(target_dir, exist_ok=True)
         
-        storage_client = storage.Client()
-        bucket = storage_client.bucket(GCS_BUCKET_NAME)
+        # Use the factory to get the right provider
+        storage_provider = get_storage_provider()
         
+        # The provider is only responsible for downloading the archive
         archive_name = f"{target}-knowledge-pack.tar.gz"
-        blob = bucket.blob(archive_name)
-        
-        if not blob.exists():
-            raise FileNotFoundError(f"Archive {archive_name} not found in GCS bucket {GCS_BUCKET_NAME}.")
-
         local_archive_path = os.path.join(target_dir, archive_name)
-        blob.download_to_filename(local_archive_path)
         
+        # This now works for local, GCS, S3, etc.
+        if not storage_provider.download_pack(target, local_archive_path):
+            raise FileNotFoundError(f"Failed to download knowledge pack for '{target}'.")
+
         logging.info(f"Extracting archive {local_archive_path}...")
         with tarfile.open(local_archive_path, "r:gz") as tar:
-            # Extract to the parent directory of where the tar is, e.g., /data/
             tar.extractall(path=target_dir)
-        
-        # The tarball contains a dir like 'langchain-knowledge-pack', we need to move its contents up
-        extracted_folder = os.path.join(target_dir, f"{target}-knowledge-pack")
-        for item in os.listdir(extracted_folder):
-             os.rename(os.path.join(extracted_folder, item), os.path.join(target_dir, item))
-        os.rmdir(extracted_folder)
+
+        # Clean up the downloaded archive
         os.remove(local_archive_path)
 
-    # Now that the files are guaranteed to be local, load ChromaDB
+        # Standardize the directory structure after extraction
+        extracted_folder_name = f"{target}-knowledge-pack"
+        extracted_folder_path = os.path.join(target_dir, extracted_folder_name)
+        if os.path.isdir(extracted_folder_path):
+            for item in os.listdir(extracted_folder_path):
+                os.rename(os.path.join(extracted_folder_path, item), os.path.join(target_dir, item))
+            os.rmdir(extracted_folder_path)
+
+    # Now that files are local, the rest of the logic is the same
     logging.info(f"Loading ChromaDB collection for '{target}' from {db_path}")
     client = chromadb.PersistentClient(path=db_path)
     collection = client.get_collection(name=target)
     
-    # Cache the client for future requests
     chroma_clients[target] = collection
     return collection
