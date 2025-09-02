@@ -1,5 +1,3 @@
-# docker-compose.yml
-# version: '3.8'
 
 services:
   knowledge-api:
@@ -9,15 +7,13 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      # Mount the local 'repository' dir into the container's 'packs' dir
       - ./repository:/packs
-      # Mount a volume for the internal cache to persist it across restarts
       - api_data:/data
+    env_file:
+      - .env
     environment:
-      # Configure the API to run in local mode
-      - STORAGE_PROVIDER=local
-      # Tell the LocalStorageProvider where to find the packs inside the container
-      - LOCAL_PACKS_PATH=/packs
+      STORAGE_PROVIDER: ${STORAGE_PROVIDER}
+      LOCAL_PACKS_PATH: ${LOCAL_PACKS_PATH}
 
 volumes:
   api_data:

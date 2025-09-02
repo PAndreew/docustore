@@ -7,13 +7,11 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Set environment variables for Python
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
 # Install uv for package management
 RUN pip install uv
-
-# --- OPTIMIZATION & SRC LAYOUT FIX ---
 
 # 1. Copy ONLY the dependency file first.
 COPY pyproject.toml ./
@@ -22,14 +20,10 @@ COPY pyproject.toml ./
 RUN uv pip install --system --no-cache ".[all]"
 
 # 3. CRITICAL FIX: Copy the contents of your 'src' directory into the WORKDIR.
-# Instead of `COPY . .`, we specifically copy from `src`.
-# This makes `api` and `pipeline` top-level packages inside `/app`.
 COPY src/ .
-
-# --- END FIX ---
 
 # Expose the port the app runs on
 EXPOSE 8080
 
 # Now this command will work because '/app/api' exists.
-CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8080"]```
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8080"]
