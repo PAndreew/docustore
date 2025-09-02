@@ -6,6 +6,7 @@ from functools import lru_cache
 
 import chromadb
 from sentence_transformers import SentenceTransformer
+import shutil
 from .storage import get_storage_provider  # Import the factory
 
 # --- Configuration ---
@@ -37,33 +38,34 @@ def load_knowledge_pack(target: str):
         logging.info(f"Knowledge pack for '{target}' not found in local cache. Using storage provider.")
         os.makedirs(target_dir, exist_ok=True)
         
-        # Use the factory to get the right provider
         storage_provider = get_storage_provider()
         
-        # The provider is only responsible for downloading the archive
         archive_name = f"{target}-knowledge-pack.tar.gz"
+        # This is the path where the downloaded/copied archive will be temporarily stored
         local_archive_path = os.path.join(target_dir, archive_name)
         
-        # This now works for local, GCS, S3, etc.
+        # This call now correctly asks the provider to place the .tar.gz at local_archive_path
         if not storage_provider.download_pack(target, local_archive_path):
             raise FileNotFoundError(f"Failed to download knowledge pack for '{target}'.")
 
         logging.info(f"Extracting archive {local_archive_path}...")
         with tarfile.open(local_archive_path, "r:gz") as tar:
+            # The destination for extraction is the parent directory
             tar.extractall(path=target_dir)
 
-        # Clean up the downloaded archive
+        # Clean up the downloaded/copied archive file
         os.remove(local_archive_path)
 
-        # Standardize the directory structure after extraction
+        # Standardize the directory structure after extraction (this logic is correct)
         extracted_folder_name = f"{target}-knowledge-pack"
         extracted_folder_path = os.path.join(target_dir, extracted_folder_name)
         if os.path.isdir(extracted_folder_path):
+            # Move contents from the nested directory up one level
             for item in os.listdir(extracted_folder_path):
-                os.rename(os.path.join(extracted_folder_path, item), os.path.join(target_dir, item))
+                shutil.move(os.path.join(extracted_folder_path, item), os.path.join(target_dir, item))
             os.rmdir(extracted_folder_path)
 
-    # Now that files are local, the rest of the logic is the same
+    # Now that files are local, the rest of the logic proceeds as before
     logging.info(f"Loading ChromaDB collection for '{target}' from {db_path}")
     client = chromadb.PersistentClient(path=db_path)
     collection = client.get_collection(name=target)
