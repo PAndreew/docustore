@@ -1,11 +1,11 @@
 # docker-compose.yml
-version: '3.8'
+# version: '3.8'
 
 services:
   knowledge-api:
     build:
       context: .
-      dockerfile: api/Dockerfile
+      dockerfile: src/api/Dockerfile
     ports:
       - "8080:8080"
     volumes:

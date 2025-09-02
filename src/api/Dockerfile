@@ -1,3 +1,5 @@
+# api/Dockerfile
+
 # Use an official Python runtime as a parent image
 FROM python:3.11-slim
 
@@ -11,16 +13,23 @@ ENV PYTHONUNBUFFERED 1
 # Install uv for package management
 RUN pip install uv
 
-# Copy only the dependency file and install to leverage Docker layer caching
-COPY pyproject.toml ./
-RUN uv pip install --system --no-cache -r pyproject.toml
+# --- OPTIMIZATION & SRC LAYOUT FIX ---
 
-# Copy the rest of the application code
-COPY . .
+# 1. Copy ONLY the dependency file first.
+COPY pyproject.toml ./
+
+# 2. Install dependencies. This slow step remains cached.
+RUN uv pip install --system --no-cache ".[all]"
+
+# 3. CRITICAL FIX: Copy the contents of your 'src' directory into the WORKDIR.
+# Instead of `COPY . .`, we specifically copy from `src`.
+# This makes `api` and `pipeline` top-level packages inside `/app`.
+COPY src/ .
+
+# --- END FIX ---
 
 # Expose the port the app runs on
 EXPOSE 8080
 
-# Command to run the Uvicorn server for FastAPI
-# The host 0.0.0.0 is crucial to make it accessible from outside the container
-CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8080"]
+# Now this command will work because '/app/api' exists.
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8080"]```

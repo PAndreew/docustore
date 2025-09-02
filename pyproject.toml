@@ -1,5 +1,5 @@
 [project]
-name = "documentation-pipeline"
+name = "docustore"
 version = "0.1.0"
 description = "A pipeline to scrape documentation, clean it, and build a knowledge graph."
 requires-python = ">=3.8"
@@ -24,6 +24,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "ruff", # An extremely fast Python linter and code formatter
+    "docustore[all]",
 ]
 # Install these for specific cloud providers
 gcp = ["google-cloud-storage"]
@@ -31,9 +32,9 @@ aws = ["boto3"]
 http = ["requests"]
 # A convenience group to install everything
 all = [
-    "knowledge-pack-api[gcp]",
-    "knowledge-pack-api[aws]",
-    "knowledge-pack-api[http]",
+    "docustore[gcp]",
+    "docustore[aws]",
+    "docustore[http]",
 ]
 
 [tool.ruff]
