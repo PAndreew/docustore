@@ -33,4 +33,4 @@ page_limit = 500
 
 [targets.pydanticai]
 url = "https://ai.pydantic.dev/"
-page_limit = 5
+page_limit = 50

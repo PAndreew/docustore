@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 from markdownify import markdownify
 from readability import Document as ReadabilityDocument
 
-# Conditional import for Firecrawl, allowing the module to work without it
+# Conditional import for Firecrawl
 try:
     from firecrawl import Firecrawl
 except ImportError:
@@ -28,18 +28,14 @@ def _get_main_content_markdown(html_content: str, url: str) -> Optional[str]:
     Extracts the main content from HTML using readability and converts it to Markdown.
     """
     try:
-        # Using readability to get the main article content
         doc = ReadabilityDocument(html_content)
         main_html = doc.summary()
 
         if main_html:
-            # Clean up the HTML before converting to markdown
             soup = BeautifulSoup(main_html, 'lxml')
-            # Remove script, style, and other non-content tags that might be in summary
             for unwanted_tag in soup(['script', 'style', 'noscript', 'img', 'iframe', 'svg', 'canvas', 'picture', 'source']):
                 unwanted_tag.decompose()
             
-            # Convert the cleaned HTML to markdown
             markdown_content = markdownify(str(soup), heading_style="ATX", strong_em_symbol="*", default_title=doc.title())
             return markdown_content.strip()
         return None
@@ -54,7 +50,6 @@ def _scrape_with_hrequests(start_url: str, limit: int) -> List[Dict[str, Any]]:
     """
     logging.info("Attempting primary scrape with hrequests for URL: %s (limit: %d)", start_url, limit)
     session = hrequests.Session()
-    # Use a common User-Agent to mimic a browser and avoid being blocked
     session.headers.update({
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36'
     })
@@ -62,8 +57,6 @@ def _scrape_with_hrequests(start_url: str, limit: int) -> List[Dict[str, Any]]:
     queue = deque([start_url])
     visited_urls = set()
     results: List[Dict[str, Any]] = []
-
-    base_domain = urlparse(start_url).netloc
 
     while queue and len(results) < limit:
         current_url = queue.popleft()
@@ -75,13 +68,20 @@ def _scrape_with_hrequests(start_url: str, limit: int) -> List[Dict[str, Any]]:
         logging.info("Scraping page: %s (Documents found: %d/%d)", current_url, len(results), limit)
 
         try:
-            response = session.get(current_url, timeout=15) # Increased timeout
-            response.raise_for_status() # Raise an exception for HTTP errors (4xx or 5xx)
+            response = session.get(current_url, timeout=15)
+            
+            # REPLACED `raise_for_status()` with a check on `response.ok`
+            if not response.ok:
+                logging.warning(
+                    "Request to %s failed with status code %d: %s",
+                    current_url, response.status_code, response.reason
+                )
+                continue # Skip to the next URL
+
             html_content = response.text
 
             markdown = _get_main_content_markdown(html_content, current_url)
             if markdown:
-                # Extract title from the original full HTML for better accuracy
                 soup_full = BeautifulSoup(html_content, 'lxml')
                 title_tag = soup_full.find('title')
                 title = title_tag.get_text(strip=True) if title_tag else "No Title"
@@ -96,21 +96,17 @@ def _scrape_with_hrequests(start_url: str, limit: int) -> List[Dict[str, Any]]:
             else:
                 logging.warning("No main content extracted for %s. This page will not be included in results.", current_url)
 
-            # Find links to crawl further
             soup_links = BeautifulSoup(html_content, 'lxml')
             for link in soup_links.find_all('a', href=True):
                 href = link['href']
-                # Resolve relative URLs and remove URL fragments
                 absolute_url = urljoin(current_url, href).split('#')[0]
 
-                # Only follow links on the same domain and not yet visited
                 if _is_same_domain(start_url, absolute_url) and absolute_url not in visited_urls and absolute_url not in queue:
                     queue.append(absolute_url)
 
-        except hrequests.exceptions.HTTPStatusError as e:
-            logging.warning("HTTP error scraping %s: %s", current_url, e)
         except hrequests.exceptions.RequestException as e:
-            logging.warning("Request error scraping %s: %s", current_url, e)
+            # This block now primarily catches network-level errors (timeouts, DNS failures, etc.)
+            logging.warning("Request failed for %s: %s", current_url, e)
         except Exception as e:
             logging.error("An unexpected error occurred while processing %s: %s", current_url, e, exc_info=True)
 

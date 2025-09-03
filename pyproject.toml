@@ -18,7 +18,10 @@ dependencies = [
     "bitsandbytes",
     "chromadb",
     "sentence_transformers",
-    "fastapi"
+    "fastapi",
+    "hrequests",
+    "markdownify",
+    "readability"
 ]
 
 # Define optional dependencies for development (like linters and formatters)
