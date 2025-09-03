@@ -1,0 +1,27 @@
+# .dockerignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Docker
+Dockerfile
+
+# Git
+.git/
+.gitignore
+
+# Project-specific
+.cache/
+repository/
+pipeline.log
+*.tar.gz
+
+# IDE / OS specific
+.idea/
+.vscode/
+*.DS_Store
