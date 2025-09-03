@@ -21,7 +21,7 @@ dependencies = [
     "fastapi",
     "hrequests",
     "markdownify",
-    "readability"
+    "readability-lxml"
 ]
 
 # Define optional dependencies for development (like linters and formatters)
