@@ -3,7 +3,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**docustore** is an automated pipeline that scrapes software documentation, processes the content, creates self-contained, downloadable **Knowledge Packs** AND a self-hostable API server to query these Knowledge Packs. The goal is to provide developers and LLMs with up-to-date, grounded information, especially for frameworks that are rapidly changing or less popular.
+**docustore** is self-hostable API server which consists of an automated pipeline that scrapes software documentation, processes the content, creates self-contained, downloadable **Knowledge Packs** AND a Dockerized FastAPI server for querying the Knowledge Packs. The goal is to provide developers and LLMs with up-to-date, grounded information, especially for frameworks that are rapidly changing or less popular.
 
 Instead of just providing raw text, this project chunks, cleans, and embeds the documentation into a portable vector store. The resulting "Knowledge Pack" can be used locally for offline-first Retrieval-Augmented Generation (RAG) applications **OR** served as API with Docker, ensuring that AI-powered developer tools have access to accurate, versioned information.
 
