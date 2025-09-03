@@ -1,0 +1,7 @@
+{
+  "framework": "pydanticai",
+  "version": "2025.09.03",
+  "documents_scraped": 50,
+  "chunks_embedded": 459,
+  "embedding_model": "all-MiniLM-L6-v2"
+}
